@@ -3,6 +3,8 @@ package com.example.textsummarizer.summarizer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import opennlp.tools.tokenize.WhitespaceTokenizer;
 
@@ -32,15 +34,33 @@ public class SummarizerStartingPoint {
     }
 
     private void tokenization(){
+//        inputText = removeSquareBracketTexts(inputText);
         getSentences();
         getWords();
         stopWordRemoval();
         print();
     }
+
+    private String removeSquareBracketTexts(String input) {
+        Pattern pattern = Pattern.compile("\\[[^\\]]*\\]"); // Matches anything between square brackets.
+        Matcher matcher = pattern.matcher(input);
+        StringBuffer stringBuffer = new StringBuffer();
+
+        while (matcher.find()) {
+            matcher.appendReplacement(stringBuffer, "");
+        }
+        matcher.appendTail(stringBuffer);
+
+        return stringBuffer.toString();
+    }
+
     private void getSentences(){
         sentences = new ArrayList<>();
-        String[] splitSentences = inputText.split("[!?।;]",0);
-        Collections.addAll(sentences, splitSentences);
+        String[] splitSentences = inputText.split("[!?।;\\n]",0);
+        for(String sentence:splitSentences){
+            if(sentence.length() != 0) sentences.add(sentence);
+        }
+//        Collections.addAll(sentences, splitSentences);
     }
 
     private void getWords(){
@@ -52,7 +72,7 @@ public class SummarizerStartingPoint {
             String[] tokens = tokenizer.tokenize(individualSentence);
             //whitespace removal doesn't remove some uncommon punctuations
             for (String token: tokens){
-                String[] trimmed = token.split("[- ,“”\"()]",0);
+                String[] trimmed = token.split("[- ,“”\"()–\\[\\]]",0);
                 for(String word: trimmed) if(word.length()!=0) tokenizedSentence.add(word);
             }
 
