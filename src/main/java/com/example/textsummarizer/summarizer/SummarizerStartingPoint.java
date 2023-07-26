@@ -27,9 +27,15 @@ public class SummarizerStartingPoint {
     private ArrayList<ArrayList<String>> sentenceDividedIntoWords;
     public String driver(String s){
         inputText = s;
+        tokenization();
+        return s;
+    }
+
+    private void tokenization(){
         getSentences();
         getWords();
-        return s;
+        stopWordRemoval();
+        print();
     }
     private void getSentences(){
         sentences = new ArrayList<>();
@@ -53,9 +59,6 @@ public class SummarizerStartingPoint {
             sentenceDividedIntoWords.add(tokenizedSentence);
         }
 
-        stopWordRemoval();
-
-        print();
     }
 
     private void stopWordRemoval(){
