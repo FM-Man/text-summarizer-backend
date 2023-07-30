@@ -1,7 +1,7 @@
 package com.example.textsummarizer.summarizer;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -27,9 +27,13 @@ public class SummarizerStartingPoint {
     private String inputText;
     private ArrayList<String> sentences;
     private ArrayList<ArrayList<String>> sentenceDividedIntoWords;
+    private ArrayList<float[]> vectorField;
+
     public String driver(String s){
         inputText = s;
         tokenization();
+        vectorField = getVectorField();
+        printVectorField();
         return s;
     }
 
@@ -38,7 +42,7 @@ public class SummarizerStartingPoint {
         getSentences();
         getWords();
         stopWordRemoval();
-        print();
+        printToken();
     }
 
     private String removeSquareBracketTexts(String input) {
@@ -87,13 +91,41 @@ public class SummarizerStartingPoint {
         }
     }
 
+    private ArrayList<float[]> getVectorField(){
+        ArrayList<float[]> vectorField = new ArrayList<>();
+        for (int i = 0; i<sentenceDividedIntoWords.size();i++){
+            float[] indSentenceVectorField = new float[301];
+            int totalWordsInTheSentence = sentenceDividedIntoWords.get(i).size();
+            for (int j=0;j<sentenceDividedIntoWords.get(i).size();j++){
+                float[] indWordVectorField = DemoDriver.wvd.dataset.get(sentenceDividedIntoWords.get(i).get(j));
 
-    private void print(){
+                if(indWordVectorField == null){
+                    indWordVectorField = new float[300];
+                }
+                for (int k=0; k<300;k++){
+                    indSentenceVectorField[k] += (1.0/totalWordsInTheSentence) * indWordVectorField[k];
+                }
+            }
+            indSentenceVectorField[300] = (float) i /sentenceDividedIntoWords.size();
+
+            vectorField.add(indSentenceVectorField);
+        }
+        return vectorField;
+    }
+
+    private void printToken(){
         for (ArrayList<String> sentence : sentenceDividedIntoWords){
             for (String word : sentence){
                 System.out.print(word+"|");
             }
             System.out.println();
+        }
+    }
+
+    private void printVectorField(){
+        for(int i=0; i<sentenceDividedIntoWords.size();i++){
+            System.out.println(sentences.get(i));
+            System.out.println(Arrays.toString(vectorField.get(i)));
         }
     }
 }
