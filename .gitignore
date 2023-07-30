@@ -33,3 +33,4 @@ build/
 .vscode/
 ### Dataset ###
 cc.bn.300.vec
+wordVectorData.obj
