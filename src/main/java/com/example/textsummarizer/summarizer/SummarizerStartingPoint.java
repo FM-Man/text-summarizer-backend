@@ -46,16 +46,16 @@ public class SummarizerStartingPoint {
     }
 
     private String removeSquareBracketTexts(String input) {
-        Pattern pattern = Pattern.compile("\\[[^\\]]*\\]"); // Matches anything between square brackets.
+        Pattern pattern = Pattern.compile("\\[[^]]*]"); // Matches anything between square brackets.
         Matcher matcher = pattern.matcher(input);
-        StringBuffer stringBuffer = new StringBuffer();
+        StringBuilder s = new StringBuilder();
 
         while (matcher.find()) {
-            matcher.appendReplacement(stringBuffer, "");
+            matcher.appendReplacement(s, "");
         }
-        matcher.appendTail(stringBuffer);
+        matcher.appendTail(s);
 
-        return stringBuffer.toString();
+        return s.toString();
     }
 
     private void getSentences(){
