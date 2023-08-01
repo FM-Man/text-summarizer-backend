@@ -1,13 +1,11 @@
 package com.example.textsummarizer.summarizer;
 
-import com.example.textsummarizer.summarizer.dataset.WordVectorDataset;
+import java.io.File;
+import java.io.IOException;
 
-import java.io.*;
-import java.util.Scanner;
+import static com.example.textsummarizer.summarizer.dataset.DatasetReader.*;
 
 public class DemoDriver {
-
-    public static WordVectorDataset wvd;
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
@@ -31,35 +29,5 @@ public class DemoDriver {
 
     }
 
-    private static void readFromTextFile() throws FileNotFoundException {
-        wvd = new WordVectorDataset();
-        Scanner sc = new Scanner(new File("cc.bn.300.vec"));
-        sc.nextLine();
-        int j=0;
-        while(sc.hasNext()){
-            String line = sc.nextLine();
-            String[] lineSplit = line.split(" ",0);
-            System.out.println((j++)+". "+lineSplit[0]);
-            float[] values = new float[300];
-            for (int i=1;i<301;i++){
-                values[i-1] = Float.parseFloat(lineSplit[i]);
-            }
-            wvd.dataset.put(lineSplit[0],values);
-        }
-        System.out.println("hashing done");
-    }
 
-    private static void objectInput() throws IOException, ClassNotFoundException {
-        ObjectInputStream objIn = new ObjectInputStream(new FileInputStream("wordVectorData.obj"));
-        wvd = (WordVectorDataset) objIn.readObject();
-        objIn.close();
-        System.out.println("reading done");
-    }
-
-    private static void objectOutput() throws IOException {
-        ObjectOutputStream objOutput = new ObjectOutputStream(new FileOutputStream("wordVectorData.obj"));
-        objOutput.writeObject(wvd);
-        objOutput.close();
-        System.out.println("saving done");
-    }
 }

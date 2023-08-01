@@ -8,6 +8,8 @@ import java.util.regex.Pattern;
 
 import opennlp.tools.tokenize.WhitespaceTokenizer;
 
+import static com.example.textsummarizer.summarizer.dataset.DatasetReader.wvd;
+
 public class SummarizerStartingPoint {
     private static SummarizerStartingPoint instance = null;
     private SummarizerStartingPoint(){
@@ -29,11 +31,15 @@ public class SummarizerStartingPoint {
     private ArrayList<ArrayList<String>> sentenceDividedIntoWords;
     private ArrayList<float[]> vectorField;
 
+    private double[][] affinityMatrix;
+
     public String driver(String s){
         inputText = s;
         tokenization();
         vectorField = getVectorField();
         printVectorField();
+        affinityMatrix = MatrixCalculator.getAffinityMatrix(vectorField);
+        printAffinityMatrix();
         return s;
     }
 
@@ -97,7 +103,7 @@ public class SummarizerStartingPoint {
             float[] indSentenceVectorField = new float[301];
             int totalWordsInTheSentence = sentenceDividedIntoWords.get(i).size();
             for (int j=0;j<sentenceDividedIntoWords.get(i).size();j++){
-                float[] indWordVectorField = DemoDriver.wvd.dataset.get(sentenceDividedIntoWords.get(i).get(j));
+                float[] indWordVectorField = wvd.dataset.get(sentenceDividedIntoWords.get(i).get(j));
 
                 if(indWordVectorField == null){
                     indWordVectorField = new float[300];
@@ -126,6 +132,15 @@ public class SummarizerStartingPoint {
         for(int i=0; i<sentenceDividedIntoWords.size();i++){
             System.out.println(sentences.get(i));
             System.out.println(Arrays.toString(vectorField.get(i)));
+        }
+    }
+
+    private void printAffinityMatrix(){
+        for (double[] row: affinityMatrix){
+            for(double cell: row){
+                System.out.printf("%2.3f  ",cell);
+            }
+            System.out.println();
         }
     }
 }
