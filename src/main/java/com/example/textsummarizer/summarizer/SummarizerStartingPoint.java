@@ -1,11 +1,13 @@
 package com.example.textsummarizer.summarizer;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.example.textsummarizer.summarizer.dataset.DatasetReader;
 import opennlp.tools.tokenize.WhitespaceTokenizer;
 
 import static com.example.textsummarizer.summarizer.dataset.DatasetReader.wvd;
@@ -15,7 +17,10 @@ public class SummarizerStartingPoint {
     private SummarizerStartingPoint(){
 
     }
-    public static SummarizerStartingPoint getInstance(){
+    public static SummarizerStartingPoint getInstance() throws IOException, ClassNotFoundException {
+        if(wvd == null){
+            DatasetReader.read();
+        }
         if(instance == null){
             instance = new SummarizerStartingPoint();
         }

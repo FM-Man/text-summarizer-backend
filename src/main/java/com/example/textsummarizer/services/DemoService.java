@@ -4,11 +4,12 @@ import com.example.textsummarizer.models.Payload;
 import com.example.textsummarizer.summarizer.SummarizerStartingPoint;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.util.Optional;
 
 @Service
 public class DemoService {
-    public Optional<Payload> summarize(Payload request){
+    public Optional<Payload> summarize(Payload request) throws IOException, ClassNotFoundException {
         String summarizedText = SummarizerStartingPoint
                 .getInstance()
                 .driver( request.getText() );

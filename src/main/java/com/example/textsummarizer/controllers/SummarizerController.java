@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.io.IOException;
 import java.util.Optional;
 
 @Controller
@@ -20,7 +21,7 @@ public class SummarizerController {
     private DemoService demoService;
 
     @PostMapping
-    public ResponseEntity<Optional<Payload>> summarize (@RequestBody Payload reqPayload){
+    public ResponseEntity<Optional<Payload>> summarize (@RequestBody Payload reqPayload) throws IOException, ClassNotFoundException {
         Optional<Payload> response = demoService.summarize(reqPayload);
 
         if(response.isEmpty())

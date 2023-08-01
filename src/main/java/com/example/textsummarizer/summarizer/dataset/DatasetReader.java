@@ -5,7 +5,26 @@ import java.util.Scanner;
 
 public class DatasetReader {
     public static WordVectorDataset wvd;
-    public static void readFromTextFile() throws FileNotFoundException {
+
+    public static void read() throws IOException, ClassNotFoundException {
+        File f = new File("wordVectorData.obj");
+        if(f.exists()){
+            System.out.println("binary dataset exists. taking input");
+            objectInput();
+        }
+        else {
+            System.out.println("binary dataset does not exists. reading from text file");
+            File ft = new File("cc.bn.300.vec");
+            if(ft.exists()){
+                readFromTextFile();
+                objectOutput();
+            }
+            else {
+                System.out.println("dataset does not exist. please download the cc.bn.300.vec dataset (text file) from https://fasttext.cc/docs/en/crawl-vectors.html");
+            }
+        }
+    }
+    private static void readFromTextFile() throws FileNotFoundException {
         wvd = new WordVectorDataset();
         Scanner sc = new Scanner(new File("cc.bn.300.vec"));
         sc.nextLine();
@@ -29,14 +48,14 @@ public class DatasetReader {
         System.out.println("hashing done");
     }
 
-    public static void objectInput() throws IOException, ClassNotFoundException {
+    private static void objectInput() throws IOException, ClassNotFoundException {
         ObjectInputStream objIn = new ObjectInputStream(new FileInputStream("wordVectorData.obj"));
         wvd = (WordVectorDataset) objIn.readObject();
         objIn.close();
         System.out.println("reading done");
     }
 
-    public static void objectOutput() throws IOException {
+    private static void objectOutput() throws IOException {
         ObjectOutputStream objOutput = new ObjectOutputStream(new FileOutputStream("wordVectorData.obj"));
         objOutput.writeObject(wvd);
         objOutput.close();
