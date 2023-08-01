@@ -31,4 +31,19 @@ public class MatrixCalculator {
         }
         return sqrt(sumOfSquare);
     }
+
+    public static double[][] getDegreeMatrix(double[][] affinityMatrix){
+        double[][] degreeMatrix = new double[affinityMatrix.length][affinityMatrix[0].length];
+
+        for(int i=0; i<degreeMatrix[0].length;i++){
+            double value = 0;
+            for (int j=0; j< degreeMatrix.length;j++){
+                value += affinityMatrix[j][i];
+            }
+            degreeMatrix[i][i] = value;
+        }
+
+        return degreeMatrix;
+
+    }
 }

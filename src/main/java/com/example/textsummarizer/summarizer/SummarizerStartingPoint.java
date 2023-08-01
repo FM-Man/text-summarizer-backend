@@ -37,14 +37,19 @@ public class SummarizerStartingPoint {
     private ArrayList<float[]> vectorField;
 
     private double[][] affinityMatrix;
+    private double[][] degreeMatrix;
 
     public String driver(String s){
         inputText = s;
         tokenization();
         vectorField = getVectorField();
         printVectorField();
+        System.out.println("==========================================================");
         affinityMatrix = MatrixCalculator.getAffinityMatrix(vectorField);
-        printAffinityMatrix();
+        printMatrix(affinityMatrix);
+        System.out.println("=============================================================");
+        degreeMatrix = MatrixCalculator.getDegreeMatrix(affinityMatrix);
+        printMatrix(degreeMatrix);
         return s;
     }
 
@@ -140,10 +145,10 @@ public class SummarizerStartingPoint {
         }
     }
 
-    private void printAffinityMatrix(){
-        for (double[] row: affinityMatrix){
+    private void printMatrix(double[][] matrix){
+        for (double[] row: matrix){
             for(double cell: row){
-                System.out.printf("%2.3f  ",cell);
+                System.out.printf("%4.3f  ",cell);
             }
             System.out.println();
         }
