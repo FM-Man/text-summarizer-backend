@@ -46,15 +46,17 @@ public class SummarizerStartingPoint {
         tokenization();
         vectorField = getVectorField();
         printVectorField();
-        System.out.println("==========================================================");
+//        System.out.println("=============================================================");
         affinityMatrix = MatrixCalculator.getAffinityMatrix(vectorField);
-        printMatrix(affinityMatrix);
-        System.out.println("=============================================================");
+//        printMatrix(affinityMatrix);
+//        System.out.println("=============================================================");
         degreeMatrix = MatrixCalculator.getDegreeMatrix(affinityMatrix);
-        printMatrix(degreeMatrix);
-        System.out.println("=============================================================");
+//        printMatrix(degreeMatrix);
+//        System.out.println("=============================================================");
         graphLaplacian = MatrixCalculator.subtractMatrix(degreeMatrix,affinityMatrix);
         printMatrix(graphLaplacian);
+        System.out.println("=============================================================");
+        MatrixCalculator.getEigenValueAndEigenVector(graphLaplacian);
         return s;
     }
 
@@ -63,7 +65,7 @@ public class SummarizerStartingPoint {
         getSentences();
         getWords();
         stopWordRemoval();
-        printToken();
+//        printToken();
     }
 
     private String removeSquareBracketTexts(String input) {

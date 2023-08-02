@@ -1,5 +1,10 @@
 package com.example.textsummarizer.summarizer;
 
+import org.apache.commons.math3.linear.Array2DRowRealMatrix;
+import org.apache.commons.math3.linear.EigenDecomposition;
+import org.apache.commons.math3.linear.RealMatrix;
+import org.apache.commons.math3.linear.RealVector;
+
 import java.util.ArrayList;
 
 import static java.lang.Math.*;
@@ -48,7 +53,7 @@ public class MatrixCalculator {
     }
 
     public static double[][] subtractMatrix(double[][] A, double[][] B) throws Exception {
-        double result[][] = new double[A.length][A[0].length];
+        double[][] result = new double[A.length][A[0].length];
         if(A.length != B.length && A[0].length != B[0].length) throw new Exception("Dimension doesn't match");
 
         for (int i=0; i<result.length;i++){
@@ -58,5 +63,30 @@ public class MatrixCalculator {
         }
 
         return result;
+    }
+
+    public static void getEigenValueAndEigenVector(double[][] matrixData){
+
+        RealMatrix matrix = new Array2DRowRealMatrix(matrixData);
+
+        // Perform eigen decomposition
+        EigenDecomposition decomposition = new EigenDecomposition(matrix);
+
+        // Get eigenvalues and eigenvectors
+        double[] eigenvalues = decomposition.getRealEigenvalues();
+        RealMatrix eigenvectors = decomposition.getV();
+
+        // Print results
+        System.out.println("Eigenvalues:");
+        for (double value : eigenvalues) {
+            System.out.print(value + "\t");
+        }
+        System.out.println();
+
+        System.out.println("\nEigenvectors:");
+        for (int i = 0; i < eigenvectors.getRowDimension(); i++) {
+            RealVector eigenvector = eigenvectors.getRowVector(i);
+            System.out.println(eigenvector);
+        }
     }
 }
