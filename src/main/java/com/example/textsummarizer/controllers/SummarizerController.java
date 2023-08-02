@@ -21,7 +21,7 @@ public class SummarizerController {
     private DemoService demoService;
 
     @PostMapping
-    public ResponseEntity<Optional<Payload>> summarize (@RequestBody Payload reqPayload) throws IOException, ClassNotFoundException {
+    public ResponseEntity<Optional<Payload>> summarize (@RequestBody Payload reqPayload) throws Exception {
         Optional<Payload> response = demoService.summarize(reqPayload);
 
         if(response.isEmpty())

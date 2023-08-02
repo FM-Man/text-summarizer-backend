@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @Service
 public class DemoService {
-    public Optional<Payload> summarize(Payload request) throws IOException, ClassNotFoundException {
+    public Optional<Payload> summarize(Payload request) throws Exception {
         String summarizedText = SummarizerStartingPoint
                 .getInstance()
                 .driver( request.getText() );

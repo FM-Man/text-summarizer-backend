@@ -46,4 +46,17 @@ public class MatrixCalculator {
         return degreeMatrix;
 
     }
+
+    public static double[][] subtractMatrix(double[][] A, double[][] B) throws Exception {
+        double result[][] = new double[A.length][A[0].length];
+        if(A.length != B.length && A[0].length != B[0].length) throw new Exception("Dimension doesn't match");
+
+        for (int i=0; i<result.length;i++){
+            for (int j=0;j<result[0].length;j++){
+                result[i][j] = A[i][j]-B[i][j];
+            }
+        }
+
+        return result;
+    }
 }

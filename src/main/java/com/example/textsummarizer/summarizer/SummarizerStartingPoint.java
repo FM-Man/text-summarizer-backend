@@ -39,7 +39,9 @@ public class SummarizerStartingPoint {
     private double[][] affinityMatrix;
     private double[][] degreeMatrix;
 
-    public String driver(String s){
+    private double[][] graphLaplacian;
+
+    public String driver(String s) throws Exception {
         inputText = s;
         tokenization();
         vectorField = getVectorField();
@@ -50,11 +52,14 @@ public class SummarizerStartingPoint {
         System.out.println("=============================================================");
         degreeMatrix = MatrixCalculator.getDegreeMatrix(affinityMatrix);
         printMatrix(degreeMatrix);
+        System.out.println("=============================================================");
+        graphLaplacian = MatrixCalculator.subtractMatrix(degreeMatrix,affinityMatrix);
+        printMatrix(graphLaplacian);
         return s;
     }
 
     private void tokenization(){
-//        inputText = removeSquareBracketTexts(inputText);
+        inputText = removeSquareBracketTexts(inputText);
         getSentences();
         getWords();
         stopWordRemoval();
