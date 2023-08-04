@@ -38,14 +38,16 @@ public class SummarizerStartingPoint {
 
     private double[][] affinityMatrix;
     private double[][] degreeMatrix;
-
     private double[][] graphLaplacian;
+
+    private double secondEigenValue;
+    private EigenVector secondEigenVector;
 
     public String driver(String s) throws Exception {
         inputText = s;
         tokenization();
         vectorField = getVectorField();
-        printVectorField();
+//        printVectorField();
 //        System.out.println("=============================================================");
         affinityMatrix = MatrixCalculator.getAffinityMatrix(vectorField);
 //        printMatrix(affinityMatrix);
@@ -56,7 +58,10 @@ public class SummarizerStartingPoint {
         graphLaplacian = MatrixCalculator.subtractMatrix(degreeMatrix,affinityMatrix);
         printMatrix(graphLaplacian);
         System.out.println("=============================================================");
-        MatrixCalculator.getEigenValueAndEigenVector(graphLaplacian);
+        graphLaplacian = MatrixCalculator.normalizeLaplacian(graphLaplacian);
+        printMatrix(graphLaplacian);
+        secondEigenVector = MatrixCalculator.getEigenValueAndEigenVector(graphLaplacian);
+//        secondEigenVector.sort();
         return s;
     }
 
@@ -85,7 +90,7 @@ public class SummarizerStartingPoint {
         sentences = new ArrayList<>();
         String[] splitSentences = inputText.split("[!?।;\\n]",0);
         for(String sentence:splitSentences){
-            if(sentence.length() != 0) sentences.add(sentence);
+            if(!sentence.isEmpty()) sentences.add(sentence);
         }
 //        Collections.addAll(sentences, splitSentences);
     }
@@ -100,7 +105,7 @@ public class SummarizerStartingPoint {
             //whitespace removal doesn't remove some uncommon punctuations
             for (String token: tokens){
                 String[] trimmed = token.split("[- ,“”\"()–\\[\\]]",0);
-                for(String word: trimmed) if(word.length()!=0) tokenizedSentence.add(word);
+                for(String word: trimmed) if(!word.isEmpty()) tokenizedSentence.add(word);
             }
 
             sentenceDividedIntoWords.add(tokenizedSentence);
@@ -123,11 +128,15 @@ public class SummarizerStartingPoint {
                 float[] indWordVectorField = wvd.dataset.get(sentenceDividedIntoWords.get(i).get(j));
 
                 if(indWordVectorField == null){
-                    indWordVectorField = new float[300];
+                    totalWordsInTheSentence --;
+                    continue;
                 }
                 for (int k=0; k<300;k++){
-                    indSentenceVectorField[k] += (1.0/totalWordsInTheSentence) * indWordVectorField[k];
+                    indSentenceVectorField[k] +=  indWordVectorField[k];
                 }
+            }
+            for (int k=0; k<300; k++){
+                indSentenceVectorField[k] /= totalWordsInTheSentence;
             }
             indSentenceVectorField[300] = (float) i /sentenceDividedIntoWords.size();
 
