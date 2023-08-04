@@ -50,6 +50,7 @@ public class SummarizerStartingPoint {
 //        printVectorField();
 //        System.out.println("=============================================================");
         affinityMatrix = MatrixCalculator.getAffinityMatrix(vectorField);
+        affinityMatrix = MatrixCalculator.normalizeMatrix(affinityMatrix);
 //        printMatrix(affinityMatrix);
 //        System.out.println("=============================================================");
         degreeMatrix = MatrixCalculator.getDegreeMatrix(affinityMatrix);
@@ -58,8 +59,8 @@ public class SummarizerStartingPoint {
         graphLaplacian = MatrixCalculator.subtractMatrix(degreeMatrix,affinityMatrix);
         printMatrix(graphLaplacian);
         System.out.println("=============================================================");
-        graphLaplacian = MatrixCalculator.normalizeLaplacian(graphLaplacian);
-        printMatrix(graphLaplacian);
+//        graphLaplacian = MatrixCalculator.normalizeLaplacian(graphLaplacian);
+//        printMatrix(graphLaplacian);
         secondEigenVector = MatrixCalculator.getEigenValueAndEigenVector(graphLaplacian);
 //        secondEigenVector.sort();
         return s;
