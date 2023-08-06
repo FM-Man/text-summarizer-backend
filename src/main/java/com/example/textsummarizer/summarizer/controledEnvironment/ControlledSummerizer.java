@@ -2,17 +2,6 @@ package com.example.textsummarizer.summarizer.controledEnvironment;
 
 import com.example.textsummarizer.summarizer.EigenVector;
 import com.example.textsummarizer.summarizer.MatrixCalculator;
-import com.example.textsummarizer.summarizer.dataset.DatasetReader;
-import opennlp.tools.tokenize.WhitespaceTokenizer;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import static com.example.textsummarizer.summarizer.dataset.DatasetReader.wvd;
 
 public class ControlledSummerizer {
 
@@ -56,8 +45,8 @@ public class ControlledSummerizer {
         graphLaplacian = MatrixCalculator.subtractMatrix(degreeMatrix,affinityMatrix);
         printMatrix(graphLaplacian);
         System.out.println("=============================================================");
-//        graphLaplacian = MatrixCalculator.normalizeLaplacianAccordingToWikipedia(graphLaplacian);
-//        printMatrix(graphLaplacian);
+        graphLaplacian = MatrixCalculator.lRwNormalizeLaplacian2(graphLaplacian);
+        printMatrix(graphLaplacian);
         secondEigenVector = MatrixCalculator.getEigenValueAndEigenVector(graphLaplacian);
 //        secondEigenVector.sort();
     }

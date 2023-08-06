@@ -79,9 +79,13 @@ public class MatrixCalculator {
         // Print results
         System.out.println("Eigenvalues:");
         for (double value : eigenvalues) {
-            System.out.print(value + "\t");
+            System.out.printf("%.2f | ",value);
         }
         System.out.println();
+        System.out.print("    ");
+        for (int i=1;i<eigenvalues.length;i++){
+            System.out.printf("%.2f | ", (eigenvalues[i]-eigenvalues[i-1]) );
+        }
 
 //        System.out.println("\nEigenvectors:");
 //        for (int i = 0; i < eigenvectors.getRowDimension(); i++) {
@@ -124,7 +128,7 @@ public class MatrixCalculator {
     }
 
 
-    public static double[][] normalizeLaplacian(double[][] laplacianMatrix) {
+    public static double[][] lSymNormalize2(double[][] laplacianMatrix) {
         int n = laplacianMatrix.length;
         double[][] normalizedLaplacian = new double[n][n];
 
@@ -142,6 +146,30 @@ public class MatrixCalculator {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 normalizedLaplacian[i][j] = (laplacianMatrix[i][j] / (diagonalDegree[i] * diagonalDegree[j]));
+            }
+        }
+
+        return normalizedLaplacian;
+    }
+
+    public static double[][] lRwNormalizeLaplacian2(double[][] laplacianMatrix) {
+        int n = laplacianMatrix.length;
+        double[][] normalizedLaplacian = new double[n][n];
+
+        // Calculate the diagonal degree matrix D
+        double[] diagonalDegree = new double[n];
+        for (int i = 0; i < n; i++) {
+            double sum = 0.0;
+            for (int j = 0; j < n; j++) {
+                sum += Math.abs(laplacianMatrix[i][j]);
+            }
+            diagonalDegree[i] = Math.sqrt(sum);
+        }
+
+        // Calculate the symmetrically normalized Laplacian matrix
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                normalizedLaplacian[i][j] = (laplacianMatrix[i][j] / diagonalDegree[i]);
             }
         }
 
