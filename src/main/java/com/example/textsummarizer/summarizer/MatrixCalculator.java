@@ -3,6 +3,7 @@ package com.example.textsummarizer.summarizer;
 import org.apache.commons.math3.linear.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import static java.lang.Math.*;
 
@@ -72,6 +73,7 @@ public class MatrixCalculator {
 
         // Get eigenvalues and eigenvectors
         double[] eigenvalues = decomposition.getRealEigenvalues();
+        eigenvalues = Arrays.stream(eigenvalues).sorted().toArray();
         RealMatrix eigenvectors = decomposition.getV();
 
         // Print results
