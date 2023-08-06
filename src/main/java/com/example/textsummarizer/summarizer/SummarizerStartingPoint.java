@@ -61,8 +61,9 @@ public class SummarizerStartingPoint {
         graphLaplacian = MatrixCalculator.subtractMatrix(degreeMatrix,affinityMatrix);
         printMatrix(graphLaplacian);
         System.out.println("=============================================================");
-        graphLaplacian = MatrixCalculator.normalizeLaplacianAccordingToWikipedia(graphLaplacian);
+//        graphLaplacian = MatrixCalculator.normalizeLaplacianAccordingToWikipedia(graphLaplacian);
 //        graphLaplacian = MatrixCalculator.normalizeMatrix(graphLaplacian);
+        graphLaplacian = MatrixCalculator.lRWLaplacianAccordingToWikipedia(graphLaplacian);
         printMatrix(graphLaplacian);
         secondEigenVector = MatrixCalculator.getEigenValueAndEigenVector(graphLaplacian);
 //        secondEigenVector.sort();

@@ -10,7 +10,7 @@ public class MatrixCalculator {
     public static double[][] getAffinityMatrix(ArrayList<float[]> vectorField) {
         double[][] affinityMatrix = new double[vectorField.size()][vectorField.size()];
 
-        double sigma = 1;
+        double sigma = 10;
         for (int i = 0; i < vectorField.size(); i++) {
             for (int j = 0; j < vectorField.size(); j++) {
                 if(i==j) affinityMatrix [i][j] = 0;
@@ -19,7 +19,7 @@ public class MatrixCalculator {
                                 -1 * pow(
                                         distance(vectorField.get(i), vectorField.get(j)),
                                         2
-                                ) / pow(sigma, 2)
+                                ) /(2* pow(sigma, 2))
                         );
             }
         }
@@ -146,12 +146,24 @@ public class MatrixCalculator {
         return normalizedLaplacian;
     }
 
-    public static double[][] normalizeLaplacianAccordingToWikipedia(double[][] matrix){
+    public static double[][] lSymLaplacianAccordingToWikipedia(double[][] matrix){
         double[][] normalized = new double[matrix.length][matrix[0].length];
         for (int i=0;i<matrix.length;i++){
             for(int j=0; j<matrix[i].length;j++){
                 if(i==j && matrix[i][j]!=0) normalized[i][j] =1;
                 else if(matrix[i][j]!=0) normalized[i][j] = -1/sqrt(matrix[i][i]*matrix[j][j]);
+                else normalized[i][j] =0;
+            }
+        }
+        return normalized;
+    }
+
+    public static double[][] lRWLaplacianAccordingToWikipedia(double[][] matrix){
+        double[][] normalized = new double[matrix.length][matrix[0].length];
+        for (int i=0;i<matrix.length;i++){
+            for(int j=0; j<matrix[i].length;j++){
+                if(i==j && matrix[i][j]!=0) normalized[i][j] =1;
+                else if(matrix[i][j]!=0) normalized[i][j] = -1/matrix[i][i];
                 else normalized[i][j] =0;
             }
         }
