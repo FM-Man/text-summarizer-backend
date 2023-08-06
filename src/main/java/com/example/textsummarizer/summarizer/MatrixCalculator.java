@@ -163,7 +163,7 @@ public class MatrixCalculator {
             for (int j = 0; j < n; j++) {
                 sum += Math.abs(laplacianMatrix[i][j]);
             }
-            diagonalDegree[i] = Math.sqrt(sum);
+            diagonalDegree[i] = sum;
         }
 
         // Calculate the symmetrically normalized Laplacian matrix
