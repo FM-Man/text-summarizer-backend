@@ -28,4 +28,16 @@ public class EigenVectorAndValue {
             }
         }
     }
+
+    public void printEV(){
+        System.out.println("Eigenvalues:");
+        for (double value : values) {
+            System.out.printf("%.2f | ",value);
+        }
+        System.out.println();
+        System.out.print("    ");
+        for (int i=1;i<values.length;i++){
+            System.out.printf("%.2f | ", (values[i]-values[i-1]) );
+        }
+    }
 }

@@ -47,11 +47,11 @@ public class SummarizerStartingPoint {
         inputText = s;
         tokenization();
         vectorField = getVectorField();
-//        printVectorField();
-//        System.out.println("=============================================================");
+        printVectorField();
+        System.out.println("=============================================================");
         affinityMatrix = MatrixCalculator.getAffinityMatrix(vectorField);
         printMatrix(affinityMatrix);
-        System.out.println("=====normalized a========================================================");
+//        System.out.println("=====normalized a========================================================");
 //        affinityMatrix = MatrixCalculator.normalizeMatrix(affinityMatrix);
 //        printMatrix(affinityMatrix);
         System.out.println("=============================================================");
@@ -61,11 +61,9 @@ public class SummarizerStartingPoint {
         graphLaplacian = MatrixCalculator.subtractMatrix(degreeMatrix,affinityMatrix);
         printMatrix(graphLaplacian);
         System.out.println("=============================================================");
-//        graphLaplacian = MatrixCalculator.normalizeLaplacianAccordingToWikipedia(graphLaplacian);
-//        graphLaplacian = MatrixCalculator.normalizeMatrix(graphLaplacian);
-        graphLaplacian = MatrixCalculator.lRWLaplacianAccordingToWikipedia(graphLaplacian);
+        graphLaplacian = MatrixCalculator.lRwNormalizeLaplacian2(graphLaplacian);
         printMatrix(graphLaplacian);
-        eVectorAndEValue = MatrixCalculator.getEigenValueAndEigenVector(graphLaplacian);
+        eVectorAndEValue = MatrixCalculator.getEigenValueAndEigenVectors(graphLaplacian);
 //        secondEigenVector.sort();
         return s;
     }

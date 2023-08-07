@@ -3,7 +3,6 @@ package com.example.textsummarizer.summarizer;
 import org.apache.commons.math3.linear.*;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import static java.lang.Math.*;
 
@@ -64,7 +63,7 @@ public class MatrixCalculator {
         return result;
     }
 
-    public static EigenVectorAndValue getEigenValueAndEigenVector(double[][] matrixData) {
+    public static EigenVectorAndValue getEigenValueAndEigenVectors(double[][] matrixData) {
 
         RealMatrix matrix = new Array2DRowRealMatrix(matrixData);
 
@@ -89,17 +88,13 @@ public class MatrixCalculator {
 
         double[][] vectors = new double[eigenvalues.length][];
 
-        System.out.println("\nEigenvectors:");
+//        System.out.println("\nEigenvectors:");
         for (int i = 0; i < eigenvectors.getRowDimension(); i++) {
             RealVector eigenvector = eigenvectors.getRowVector(i);
             vectors[i] = eigenvector.toArray();
-            System.out.println(eigenvector);
+//            System.out.println(eigenvector);
         }
-//        RealVector secondLastRow = eigenvectors.getRowVector(eigenvectors.getRowDimension() - 2);
-//        double[] vector = new double[secondLastRow.getDimension()];
-//        for (int i = 0; i < secondLastRow.getDimension(); i++) {
-//            vector[i] = secondLastRow.getEntry(i);
-//        }
+
 
         EigenVectorAndValue ret = new EigenVectorAndValue(vectors,eigenvalues);
 

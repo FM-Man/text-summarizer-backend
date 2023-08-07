@@ -31,7 +31,7 @@ public class ControlledSummerizer {
     private double[][] graphLaplacian;
 
     private double secondEigenValue;
-    private EigenVectorAndValue secondEigenVector;
+    private EigenVectorAndValue eigenVectorAndValue;
 
     public void driver() throws Exception {
 
@@ -45,10 +45,11 @@ public class ControlledSummerizer {
         graphLaplacian = MatrixCalculator.subtractMatrix(degreeMatrix,affinityMatrix);
         printMatrix(graphLaplacian);
         System.out.println("=============================================================");
-        graphLaplacian = MatrixCalculator.lRwNormalizeLaplacian2(graphLaplacian);
+        graphLaplacian = MatrixCalculator.lSymNormalize2(graphLaplacian);
         printMatrix(graphLaplacian);
-        secondEigenVector = MatrixCalculator.getEigenValueAndEigenVector(graphLaplacian);
-//        secondEigenVector.sort();
+        eigenVectorAndValue = MatrixCalculator.getEigenValueAndEigenVectors(graphLaplacian);
+        eigenVectorAndValue.sort();
+        eigenVectorAndValue.printEV();
     }
 
 
