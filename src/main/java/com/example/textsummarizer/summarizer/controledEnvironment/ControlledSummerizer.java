@@ -1,6 +1,6 @@
 package com.example.textsummarizer.summarizer.controledEnvironment;
 
-import com.example.textsummarizer.summarizer.EigenVector;
+import com.example.textsummarizer.summarizer.EigenVectorAndValue;
 import com.example.textsummarizer.summarizer.MatrixCalculator;
 
 public class ControlledSummerizer {
@@ -31,7 +31,7 @@ public class ControlledSummerizer {
     private double[][] graphLaplacian;
 
     private double secondEigenValue;
-    private EigenVector secondEigenVector;
+    private EigenVectorAndValue secondEigenVector;
 
     public void driver() throws Exception {
 

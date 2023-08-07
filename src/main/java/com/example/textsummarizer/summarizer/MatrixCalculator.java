@@ -64,7 +64,7 @@ public class MatrixCalculator {
         return result;
     }
 
-    public static EigenVector getEigenValueAndEigenVector(double[][] matrixData) {
+    public static EigenVectorAndValue getEigenValueAndEigenVector(double[][] matrixData) {
 
         RealMatrix matrix = new Array2DRowRealMatrix(matrixData);
 
@@ -73,32 +73,37 @@ public class MatrixCalculator {
 
         // Get eigenvalues and eigenvectors
         double[] eigenvalues = decomposition.getRealEigenvalues();
-        eigenvalues = Arrays.stream(eigenvalues).sorted().toArray();
+//        eigenvalues = Arrays.stream(eigenvalues).sorted().toArray();
         RealMatrix eigenvectors = decomposition.getV();
 
-        // Print results
-        System.out.println("Eigenvalues:");
-        for (double value : eigenvalues) {
-            System.out.printf("%.2f | ",value);
-        }
-        System.out.println();
-        System.out.print("    ");
-        for (int i=1;i<eigenvalues.length;i++){
-            System.out.printf("%.2f | ", (eigenvalues[i]-eigenvalues[i-1]) );
-        }
-
-//        System.out.println("\nEigenvectors:");
-//        for (int i = 0; i < eigenvectors.getRowDimension(); i++) {
-//            RealVector eigenvector = eigenvectors.getRowVector(i);
-//            System.out.println(eigenvector);
+//        // Print results
+//        System.out.println("Eigenvalues:");
+//        for (double value : eigenvalues) {
+//            System.out.printf("%.2f | ",value);
 //        }
-        RealVector secondLastRow = eigenvectors.getRowVector(eigenvectors.getRowDimension() - 2);
-        double[] vector = new double[secondLastRow.getDimension()];
-        for (int i = 0; i < secondLastRow.getDimension(); i++) {
-            vector[i] = secondLastRow.getEntry(i);
-        }
+//        System.out.println();
+//        System.out.print("    ");
+//        for (int i=1;i<eigenvalues.length;i++){
+//            System.out.printf("%.2f | ", (eigenvalues[i]-eigenvalues[i-1]) );
+//        }
 
-        return new EigenVector(vector);
+        double[][] vectors = new double[eigenvalues.length][];
+
+        System.out.println("\nEigenvectors:");
+        for (int i = 0; i < eigenvectors.getRowDimension(); i++) {
+            RealVector eigenvector = eigenvectors.getRowVector(i);
+            vectors[i] = eigenvector.toArray();
+            System.out.println(eigenvector);
+        }
+//        RealVector secondLastRow = eigenvectors.getRowVector(eigenvectors.getRowDimension() - 2);
+//        double[] vector = new double[secondLastRow.getDimension()];
+//        for (int i = 0; i < secondLastRow.getDimension(); i++) {
+//            vector[i] = secondLastRow.getEntry(i);
+//        }
+
+        EigenVectorAndValue ret = new EigenVectorAndValue(vectors,eigenvalues);
+
+        return ret;
     }
 
     public static double[][] normalizeMatrix(double[][] matrix) {

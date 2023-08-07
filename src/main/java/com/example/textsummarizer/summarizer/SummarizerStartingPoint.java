@@ -41,7 +41,7 @@ public class SummarizerStartingPoint {
     private double[][] graphLaplacian;
 
     private double secondEigenValue;
-    private EigenVector secondEigenVector;
+    private EigenVectorAndValue eVectorAndEValue;
 
     public String driver(String s) throws Exception {
         inputText = s;
@@ -65,7 +65,7 @@ public class SummarizerStartingPoint {
 //        graphLaplacian = MatrixCalculator.normalizeMatrix(graphLaplacian);
         graphLaplacian = MatrixCalculator.lRWLaplacianAccordingToWikipedia(graphLaplacian);
         printMatrix(graphLaplacian);
-        secondEigenVector = MatrixCalculator.getEigenValueAndEigenVector(graphLaplacian);
+        eVectorAndEValue = MatrixCalculator.getEigenValueAndEigenVector(graphLaplacian);
 //        secondEigenVector.sort();
         return s;
     }
