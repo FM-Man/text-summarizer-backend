@@ -43,6 +43,9 @@ public class SummarizerStartingPoint {
     private double secondEigenValue;
     private EigenVectorAndValue eVectorAndEValue;
 
+    private int clusterNumber;
+    private ArrayList<EigenPoint> eigenPoints;
+
     public String driver(String s) throws Exception {
         inputText = s;
         tokenization();
@@ -64,6 +67,13 @@ public class SummarizerStartingPoint {
         graphLaplacian = MatrixCalculator.lRwNormalizeLaplacian2(graphLaplacian);
         printMatrix(graphLaplacian);
         eVectorAndEValue = MatrixCalculator.getEigenValueAndEigenVectors(graphLaplacian);
+        eVectorAndEValue.sort();
+        eVectorAndEValue.printEV();
+        System.out.println();
+        clusterNumber = eVectorAndEValue.getClusterNumber();
+        System.out.println("Number of clusters: "+clusterNumber);
+        eigenPoints = eVectorAndEValue.getEigenPoints();
+        printEigenPoints();
 //        secondEigenVector.sort();
         return s;
     }
@@ -170,6 +180,13 @@ public class SummarizerStartingPoint {
                 System.out.printf("%4.3f  ",cell);
             }
             System.out.println();
+        }
+    }
+
+    private void printEigenPoints(){
+        System.out.println("Eigen Points:");
+        for (EigenPoint e:eigenPoints){
+            System.out.println(e.pos+"->"+ Arrays.toString(e.vector));
         }
     }
 }
