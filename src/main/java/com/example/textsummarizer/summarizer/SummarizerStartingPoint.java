@@ -39,12 +39,10 @@ public class SummarizerStartingPoint {
     private double[][] affinityMatrix;
     private double[][] degreeMatrix;
     private double[][] graphLaplacian;
-
-    private double secondEigenValue;
     private EigenVectorAndValue eVectorAndEValue;
-
     private int clusterNumber;
     private ArrayList<EigenPoint> eigenPoints;
+    private ArrayList<ArrayList<EigenPoint>> clusters;
 
     public String driver(String s) throws Exception {
         inputText = s;
@@ -74,6 +72,9 @@ public class SummarizerStartingPoint {
         System.out.println("Number of clusters: "+clusterNumber);
         eigenPoints = eVectorAndEValue.getEigenPoints();
         printEigenPoints();
+        KMeansClustering clusterUtil = new KMeansClustering();
+        clusters = clusterUtil.kMeansClustering(eigenPoints,clusterNumber);
+        printClusters();
 //        secondEigenVector.sort();
         return s;
     }
@@ -187,6 +188,18 @@ public class SummarizerStartingPoint {
         System.out.println("Eigen Points:");
         for (EigenPoint e:eigenPoints){
             System.out.println(e.pos+"->"+ Arrays.toString(e.vector));
+        }
+    }
+
+    private void printClusters(){
+        System.out.println("\nPrinting Clusters: ");
+        System.out.println(clusters.size());
+        for (ArrayList<EigenPoint> cluster:clusters){
+            for (EigenPoint ep:cluster){
+                System.out.print("sentence-"+ep.pos+" : ");
+                System.out.println(sentences.get(ep.pos));
+            }
+            System.out.println("======================================");
         }
     }
 }
