@@ -10,7 +10,7 @@ public class MatrixCalculator {
     public static double[][] getAffinityMatrix(ArrayList<float[]> vectorField) {
         double[][] affinityMatrix = new double[vectorField.size()][vectorField.size()];
 
-        double sigma = .7;
+        double sigma = 10;
         for (int i = 0; i < vectorField.size(); i++) {
             for (int j = 0; j < vectorField.size(); j++) {
                 if(i==j) affinityMatrix [i][j] = 0;
@@ -19,7 +19,7 @@ public class MatrixCalculator {
                                 -1 * pow(
                                         distance(vectorField.get(i), vectorField.get(j)),
                                         2
-                                ) /( pow(sigma, 2))
+                                ) / pow(sigma, 2)
                         );
             }
         }

@@ -8,4 +8,20 @@ public class EigenPoint {
         this.pos = pos;
         this.vector = vector;
     }
+
+    public int getPos() {
+        return pos;
+    }
+
+    public void setPos(int pos) {
+        this.pos = pos;
+    }
+
+    public double[] getVector() {
+        return vector;
+    }
+
+    public void setVector(double[] vector) {
+        this.vector = vector;
+    }
 }
