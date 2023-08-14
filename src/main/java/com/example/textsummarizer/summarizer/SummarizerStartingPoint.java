@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -43,48 +44,69 @@ public class SummarizerStartingPoint {
     private int clusterNumber;
     private ArrayList<EigenPoint> eigenPoints;
     private ArrayList<ArrayList<EigenPoint>> clusters;
+    private Scanner sc;
+    private String throwawayString;
 
     public String driver(String s) throws Exception {
+        sc = new Scanner(System.in);
         inputText = s;
         tokenization();
+        System.out.println("Press Enter to go to the next stage.");
+        throwawayString = sc.nextLine();
         vectorField = getVectorField();
         printVectorField();
-        System.out.println("=============================================================");
+        System.out.println("Press Enter to go to the next stage.");
+        throwawayString = sc.nextLine();
+        System.out.println("===============Affinity==============================================");
         affinityMatrix = MatrixCalculator.getAffinityMatrix(vectorField);
         printMatrix(affinityMatrix);
-//        System.out.println("=====normalized a========================================================");
-//        affinityMatrix = MatrixCalculator.normalizeMatrix(affinityMatrix);
-//        printMatrix(affinityMatrix);
-        System.out.println("=============================================================");
+        System.out.println("Press Enter to go to the next stage.");
+        throwawayString = sc.nextLine();
+        System.out.println("=====================Degree========================================");
         degreeMatrix = MatrixCalculator.getDegreeMatrix(affinityMatrix);
-//        printMatrix(degreeMatrix);
-//        System.out.println("=============================================================");
+        printMatrix(degreeMatrix);
+        System.out.println("Press Enter to go to the next stage.");
+        throwawayString = sc.nextLine();
+        System.out.println("==============Laplacian========================");
         graphLaplacian = MatrixCalculator.subtractMatrix(degreeMatrix,affinityMatrix);
         printMatrix(graphLaplacian);
-        System.out.println("=============================================================");
+        System.out.println("Press Enter to go to the next stage.");
+        throwawayString = sc.nextLine();
+        System.out.println("==============Normalized===============================================");
         graphLaplacian = MatrixCalculator.lRwNormalizeLaplacian2(graphLaplacian);
         printMatrix(graphLaplacian);
+        System.out.println("Press Enter to go to the next stage.");
+        throwawayString = sc.nextLine();
         eVectorAndEValue = MatrixCalculator.getEigenValueAndEigenVectors(graphLaplacian);
         eVectorAndEValue.sort();
         eVectorAndEValue.printEV();
+        System.out.println("Press Enter to go to the next stage.");
+        throwawayString = sc.nextLine();
         System.out.println();
         clusterNumber = eVectorAndEValue.getClusterNumber();
         System.out.println("Number of clusters: "+clusterNumber);
+        System.out.println("Press Enter to go to the next stage.");
+        throwawayString = sc.nextLine();
         eigenPoints = eVectorAndEValue.getEigenPoints();
         printEigenPoints();
+        System.out.println("Press Enter to go to the next stage.");
+        throwawayString = sc.nextLine();
         KMeansClustering clusterUtil = new KMeansClustering();
         clusters = clusterUtil.kMeansClustering(eigenPoints,clusterNumber);
         printClusters();
-//        secondEigenVector.sort();
+        System.out.println("Press Enter to go to the next stage.");
+        throwawayString = sc.nextLine();
         return s;
     }
 
     private void tokenization(){
+        System.out.println("Press Enter to go to the next stage.");
+        throwawayString = sc.nextLine();
         inputText = removeSquareBracketTexts(inputText);
         getSentences();
         getWords();
         stopWordRemoval();
-//        printToken();
+        printToken();
     }
 
     private String removeSquareBracketTexts(String input) {
