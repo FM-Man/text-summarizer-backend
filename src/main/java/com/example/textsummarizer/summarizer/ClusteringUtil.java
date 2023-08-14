@@ -1,26 +1,12 @@
 package com.example.textsummarizer.summarizer;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 
-public class KMeansClustering {
-//    public static void main(String[] args) {
-//        ArrayList<double[]> arrayList = new ArrayList<>();
-//        // Add your vectors to the arrayList
-//
-//        int k = 3; // Number of clusters
-//
-//        List<double[]> clusters = kMeansClustering(arrayList, k);
-//
-//        // Print the resulting clusters
-//        for (int i = 0; i < clusters.size(); i++) {
-//            System.out.println("Cluster " + (i + 1) + ": " + Arrays.toString(clusters.get(i)));
-//        }
-//    }
+public class ClusteringUtil {
 
-    public ArrayList<ArrayList<EigenPoint>> kMeansClustering(ArrayList<EigenPoint> data, int k) {
-        ArrayList<double[]> centroids = initializeRandomCentroids(data, k);
+
+    public ArrayList<ArrayList<EigenPoint>> SpectralClustering(ArrayList<EigenPoint> data, int k) {
+        ArrayList<double[]> centroids = initializeRandomCentroids(data, k, true);
         ArrayList<ArrayList<EigenPoint>> clusters = new ArrayList<>();
 
         for (int iteration = 0; iteration < 100; iteration++) {
@@ -40,6 +26,41 @@ public class KMeansClustering {
             ArrayList<double[]> newCentroids = new ArrayList<>();
             for (ArrayList<EigenPoint> cluster : clusters) {
                 if (!cluster.isEmpty()) {
+                    newCentroids.add(calculateCentroid(cluster, true));
+                }
+            }
+
+            if (centroids.equals(newCentroids)) {
+                break; // Convergence reached
+            }
+
+            centroids = newCentroids;
+        }
+
+        return clusters;
+    }
+
+    public ArrayList<ArrayList<double[]>> KMeansClustering(ArrayList<double[]> data, int k) {
+        ArrayList<double[]> centroids = initializeRandomCentroids(data, k);
+        ArrayList<ArrayList<double[]>> clusters = new ArrayList<>();
+
+        for (int iteration = 0; iteration < 100; iteration++) {
+            clusters.clear();
+            // Initialize clusters
+            for (int i = 0; i < k; i++) {
+                clusters.add(new ArrayList<>());
+            }
+
+            // Assign data points to clusters
+            for (double[] point : data) {
+                int closestClusterIndex = findClosestCluster(point, centroids);
+                clusters.get(closestClusterIndex).add(point);
+            }
+
+            // Update centroids
+            ArrayList<double[]> newCentroids = new ArrayList<>();
+            for (ArrayList<double[]> cluster : clusters) {
+                if (!cluster.isEmpty()) {
                     newCentroids.add(calculateCentroid(cluster));
                 }
             }
@@ -54,13 +75,26 @@ public class KMeansClustering {
         return clusters;
     }
 
-    private ArrayList<double[]> initializeRandomCentroids(ArrayList<EigenPoint> data, int k) {
+
+    private ArrayList<double[]> initializeRandomCentroids(ArrayList<EigenPoint> data, int k, boolean spectral) {
         ArrayList<double[]> centroids = new ArrayList<>();
         Random random = new Random();
 
         for (int i = 0; i < k; i++) {
             int randomIndex = random.nextInt(data.size());
             centroids.add(data.get(randomIndex).vector);
+        }
+
+        return centroids;
+    }
+
+    private ArrayList<double[]> initializeRandomCentroids(ArrayList<double[]> data, int k) {
+        ArrayList<double[]> centroids = new ArrayList<>();
+        Random random = new Random();
+
+        for (int i = 0; i < k; i++) {
+            int randomIndex = random.nextInt(data.size());
+            centroids.add(data.get(randomIndex));
         }
 
         return centroids;
@@ -89,7 +123,7 @@ public class KMeansClustering {
         return Math.sqrt(sum);
     }
 
-    private double[] calculateCentroid(ArrayList<EigenPoint> cluster) {
+    private double[] calculateCentroid(ArrayList<EigenPoint> cluster, boolean spectral) {
         int dimensions = cluster.get(0).vector.length;
         double[] centroid = new double[dimensions];
 
@@ -97,6 +131,21 @@ public class KMeansClustering {
             double sum = 0.0;
             for (EigenPoint ep : cluster) {
                 sum += ep.vector[i];
+            }
+            centroid[i] = sum / cluster.size();
+        }
+
+        return centroid;
+    }
+
+    private double[] calculateCentroid(ArrayList<double[]> cluster) {
+        int dimensions = cluster.get(0).length;
+        double[] centroid = new double[dimensions];
+
+        for (int i = 0; i < dimensions; i++) {
+            double sum = 0.0;
+            for (double[] point : cluster) {
+                sum += point[i];
             }
             centroid[i] = sum / cluster.size();
         }

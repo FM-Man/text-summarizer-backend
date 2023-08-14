@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import static java.lang.Math.*;
 
 public class MatrixCalculator {
-    public static double[][] getAffinityMatrix(ArrayList<float[]> vectorField) {
+    public static double[][] getAffinityMatrix(ArrayList<double[]> vectorField) {
         double[][] affinityMatrix = new double[vectorField.size()][vectorField.size()];
 
         double sigma = 10;

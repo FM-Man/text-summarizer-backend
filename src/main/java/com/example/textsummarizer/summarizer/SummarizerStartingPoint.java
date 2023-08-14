@@ -35,7 +35,7 @@ public class SummarizerStartingPoint {
     private String inputText;
     private ArrayList<String> sentences;
     private ArrayList<ArrayList<String>> sentenceDividedIntoWords;
-    private ArrayList<float[]> vectorField;
+    private ArrayList<double[]> vectorField;
 
     private double[][] affinityMatrix;
     private double[][] degreeMatrix;
@@ -51,12 +51,23 @@ public class SummarizerStartingPoint {
         sc = new Scanner(System.in);
         inputText = s;
         tokenization();
-        System.out.println("Press Enter to go to the next stage.");
-        throwawayString = sc.nextLine();
+        System.out.println("Press Enter 1 to Spectral Clustering and Enter 2 to KMeans Clustering: ");
+        int choice = sc.nextInt();
         vectorField = getVectorField();
         printVectorField();
         System.out.println("Press Enter to go to the next stage.");
         throwawayString = sc.nextLine();
+        if(choice ==1)
+            spectralClustering();
+        else {
+            ArrayList<ArrayList<double[]>> clusters = new ClusteringUtil().KMeansClustering(vectorField,5);
+            printClusters(clusters);
+        }
+        printClusters();
+        return s;
+    }
+
+    private void spectralClustering() throws Exception {
         System.out.println("===============Affinity==============================================");
         affinityMatrix = MatrixCalculator.getAffinityMatrix(vectorField);
         printMatrix(affinityMatrix);
@@ -91,12 +102,8 @@ public class SummarizerStartingPoint {
         printEigenPoints();
         System.out.println("Press Enter to go to the next stage.");
         throwawayString = sc.nextLine();
-        KMeansClustering clusterUtil = new KMeansClustering();
-        clusters = clusterUtil.kMeansClustering(eigenPoints,clusterNumber);
-        printClusters();
-        System.out.println("Press Enter to go to the next stage.");
-        throwawayString = sc.nextLine();
-        return s;
+        ClusteringUtil clusterUtil = new ClusteringUtil();
+        clusters = clusterUtil.SpectralClustering(eigenPoints,5);
     }
 
     private void tokenization(){
@@ -155,10 +162,10 @@ public class SummarizerStartingPoint {
         }
     }
 
-    private ArrayList<float[]> getVectorField(){
-        ArrayList<float[]> vectorField = new ArrayList<>();
+    private ArrayList<double[]> getVectorField(){
+        ArrayList<double[]> vectorField = new ArrayList<>();
         for (int i = 0; i<sentenceDividedIntoWords.size();i++){
-            float[] indSentenceVectorField = new float[301];
+            double[] indSentenceVectorField = new double[301];
             int totalWordsInTheSentence = sentenceDividedIntoWords.get(i).size();
             for (int j=0;j<sentenceDividedIntoWords.get(i).size();j++){
                 float[] indWordVectorField = wvd.dataset.get(sentenceDividedIntoWords.get(i).get(j));
@@ -218,6 +225,18 @@ public class SummarizerStartingPoint {
         System.out.println(clusters.size());
         for (ArrayList<EigenPoint> cluster:clusters){
             for (EigenPoint ep:cluster){
+                System.out.print("sentence-"+ep.pos+" : ");
+                System.out.println(sentences.get(ep.pos));
+            }
+            System.out.println("======================================");
+        }
+    }
+
+    private void printClusters(ArrayList<ArrayList<double[]>> clusters){
+        System.out.println("\nPrinting Clusters: ");
+        System.out.println(clusters.size());
+        for (ArrayList<double[]> cluster:clusters){
+            for (double[] point:cluster){
                 System.out.print("sentence-"+ep.pos+" : ");
                 System.out.println(sentences.get(ep.pos));
             }
