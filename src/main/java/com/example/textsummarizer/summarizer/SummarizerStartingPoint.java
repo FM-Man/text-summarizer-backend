@@ -60,10 +60,18 @@ public class SummarizerStartingPoint {
         if(choice ==1)
             spectralClustering();
         else {
-            ArrayList<ArrayList<double[]>> clusters = new ClusteringUtil().KMeansClustering(vectorField,5);
-            printClusters(clusters);
+            ArrayList<EigenPoint> points = new ArrayList<>();
+            for (int i=0; i<vectorField.size();i++){
+                points.add(new EigenPoint(i,vectorField.get(i)));
+            }
+            clusters = new ClusteringUtil().SpectralClustering(points,10);
         }
         printClusters();
+        System.out.println("Press 1 to go again");
+        choice = sc.nextInt();
+        if(choice==1){
+            driver(s);
+        }
         return s;
     }
 
@@ -103,7 +111,7 @@ public class SummarizerStartingPoint {
         System.out.println("Press Enter to go to the next stage.");
         throwawayString = sc.nextLine();
         ClusteringUtil clusterUtil = new ClusteringUtil();
-        clusters = clusterUtil.SpectralClustering(eigenPoints,5);
+        clusters = clusterUtil.SpectralClustering(eigenPoints,10);
     }
 
     private void tokenization(){
@@ -232,15 +240,4 @@ public class SummarizerStartingPoint {
         }
     }
 
-    private void printClusters(ArrayList<ArrayList<double[]>> clusters){
-        System.out.println("\nPrinting Clusters: ");
-        System.out.println(clusters.size());
-        for (ArrayList<double[]> cluster:clusters){
-            for (double[] point:cluster){
-                System.out.print("sentence-"+ep.pos+" : ");
-                System.out.println(sentences.get(ep.pos));
-            }
-            System.out.println("======================================");
-        }
-    }
 }

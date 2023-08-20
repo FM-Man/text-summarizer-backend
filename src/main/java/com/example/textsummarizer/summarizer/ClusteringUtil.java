@@ -40,40 +40,7 @@ public class ClusteringUtil {
         return clusters;
     }
 
-    public ArrayList<ArrayList<double[]>> KMeansClustering(ArrayList<double[]> data, int k) {
-        ArrayList<double[]> centroids = initializeRandomCentroids(data, k);
-        ArrayList<ArrayList<double[]>> clusters = new ArrayList<>();
 
-        for (int iteration = 0; iteration < 100; iteration++) {
-            clusters.clear();
-            // Initialize clusters
-            for (int i = 0; i < k; i++) {
-                clusters.add(new ArrayList<>());
-            }
-
-            // Assign data points to clusters
-            for (double[] point : data) {
-                int closestClusterIndex = findClosestCluster(point, centroids);
-                clusters.get(closestClusterIndex).add(point);
-            }
-
-            // Update centroids
-            ArrayList<double[]> newCentroids = new ArrayList<>();
-            for (ArrayList<double[]> cluster : clusters) {
-                if (!cluster.isEmpty()) {
-                    newCentroids.add(calculateCentroid(cluster));
-                }
-            }
-
-            if (centroids.equals(newCentroids)) {
-                break; // Convergence reached
-            }
-
-            centroids = newCentroids;
-        }
-
-        return clusters;
-    }
 
 
     private ArrayList<double[]> initializeRandomCentroids(ArrayList<EigenPoint> data, int k, boolean spectral) {

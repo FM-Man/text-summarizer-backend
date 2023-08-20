@@ -27,7 +27,7 @@ public class MatrixCalculator {
         return affinityMatrix;
     }
 
-    private static double distance(float[] a, float[] b) {
+    private static double distance(double[] a, double[] b) {
         double sumOfSquare = 0;
         for (int i = 0; i < a.length; i++) {
             sumOfSquare += pow(a[i] - b[i], 2);
