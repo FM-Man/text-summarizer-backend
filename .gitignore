@@ -32,5 +32,5 @@ build/
 ### VS Code ###
 .vscode/
 ### Dataset ###
-cc.bn.300.vec
-wordVectorData.obj
+java-app/cc.bn.300.vec
+java-app/wordVectorData.obj
