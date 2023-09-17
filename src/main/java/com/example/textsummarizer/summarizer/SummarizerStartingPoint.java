@@ -51,27 +51,27 @@ public class SummarizerStartingPoint {
         sc = new Scanner(System.in);
         inputText = s;
         tokenization();
-        System.out.println("Press Enter 1 to Spectral Clustering and Enter 2 to KMeans Clustering: ");
-        int choice = sc.nextInt();
+//        System.out.println("Press Enter 1 to Spectral Clustering and Enter 2 to KMeans Clustering: ");
+//        int choice = sc.nextInt();
         vectorField = getVectorField();
         printVectorField();
-        System.out.println("Press Enter to go to the next stage.");
-        throwawayString = sc.nextLine();
-        if(choice ==1)
+//        System.out.println("Press Enter to go to the next stage.");
+//        throwawayString = sc.nextLine();
+//        if(choice ==1)
             spectralClustering();
-        else {
-            ArrayList<EigenPoint> points = new ArrayList<>();
-            for (int i=0; i<vectorField.size();i++){
-                points.add(new EigenPoint(i,vectorField.get(i)));
-            }
-            clusters = new ClusteringUtil().SpectralClustering(points,10);
-        }
+//        else {
+//            ArrayList<EigenPoint> points = new ArrayList<>();
+//            for (int i=0; i<vectorField.size();i++){
+//                points.add(new EigenPoint(i,vectorField.get(i)));
+//            }
+//            clusters = new ClusteringUtil().SpectralClustering(points,10);
+//        }
         printClusters();
-        System.out.println("Press 1 to go again");
-        choice = sc.nextInt();
-        if(choice==1){
-            driver(s);
-        }
+//        System.out.println("Press 1 to go again");
+//        choice = sc.nextInt();
+//        if(choice==1){
+//            driver(s);
+//        }
         return s;
     }
 
@@ -79,44 +79,44 @@ public class SummarizerStartingPoint {
         System.out.println("===============Affinity==============================================");
         affinityMatrix = MatrixCalculator.getAffinityMatrix(vectorField);
         printMatrix(affinityMatrix);
-        System.out.println("Press Enter to go to the next stage.");
-        throwawayString = sc.nextLine();
+//        System.out.println("Press Enter to go to the next stage.");
+//        throwawayString = sc.nextLine();
         System.out.println("=====================Degree========================================");
         degreeMatrix = MatrixCalculator.getDegreeMatrix(affinityMatrix);
         printMatrix(degreeMatrix);
-        System.out.println("Press Enter to go to the next stage.");
-        throwawayString = sc.nextLine();
+//        System.out.println("Press Enter to go to the next stage.");
+//        throwawayString = sc.nextLine();
         System.out.println("==============Laplacian========================");
         graphLaplacian = MatrixCalculator.subtractMatrix(degreeMatrix,affinityMatrix);
         printMatrix(graphLaplacian);
-        System.out.println("Press Enter to go to the next stage.");
-        throwawayString = sc.nextLine();
+//        System.out.println("Press Enter to go to the next stage.");
+//        throwawayString = sc.nextLine();
         System.out.println("==============Normalized===============================================");
-        graphLaplacian = MatrixCalculator.lRwNormalizeLaplacian2(graphLaplacian);
+        graphLaplacian = MatrixCalculator.lSymNormalize2(graphLaplacian);
         printMatrix(graphLaplacian);
-        System.out.println("Press Enter to go to the next stage.");
-        throwawayString = sc.nextLine();
+//        System.out.println("Press Enter to go to the next stage.");
+//        throwawayString = sc.nextLine();
         eVectorAndEValue = MatrixCalculator.getEigenValueAndEigenVectors(graphLaplacian);
         eVectorAndEValue.sort();
         eVectorAndEValue.printEV();
-        System.out.println("Press Enter to go to the next stage.");
-        throwawayString = sc.nextLine();
+//        System.out.println("Press Enter to go to the next stage.");
+//        throwawayString = sc.nextLine();
         System.out.println();
         clusterNumber = eVectorAndEValue.getClusterNumber();
         System.out.println("Number of clusters: "+clusterNumber);
-        System.out.println("Press Enter to go to the next stage.");
-        throwawayString = sc.nextLine();
+//        System.out.println("Press Enter to go to the next stage.");
+//        throwawayString = sc.nextLine();
         eigenPoints = eVectorAndEValue.getEigenPoints();
         printEigenPoints();
-        System.out.println("Press Enter to go to the next stage.");
-        throwawayString = sc.nextLine();
+//        System.out.println("Press Enter to go to the next stage.");
+//        throwawayString = sc.nextLine();
         ClusteringUtil clusterUtil = new ClusteringUtil();
         clusters = clusterUtil.SpectralClustering(eigenPoints,10);
     }
 
     private void tokenization(){
-        System.out.println("Press Enter to go to the next stage.");
-        throwawayString = sc.nextLine();
+//        System.out.println("Press Enter to go to the next stage.");
+//        throwawayString = sc.nextLine();
         inputText = removeSquareBracketTexts(inputText);
         getSentences();
         getWords();
