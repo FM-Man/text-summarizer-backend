@@ -1,7 +1,7 @@
-from Preprocessor import sent_tokenize
+from Preprocessor import word_divider
 
 def getSummary(text):
-    sentences = sent_tokenize(text)
-    for idx, sentence in enumerate(sentences):
-        print(f"Sentence {idx + 1}: {sentence}")
+    words = word_divider(text)
+    
+    print(words)
     return text
