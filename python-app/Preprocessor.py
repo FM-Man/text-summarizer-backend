@@ -18,6 +18,18 @@ def split_text_by_dividers(text, dividers):
     
     return sentences
 
+def stopword_removal(words):
+    stop_word_file = open("stopwords.txt","r",encoding="utf8")
+    stop_words = stop_word_file.readlines()
+    stop_words = [stop_word.split('\n')[0] for stop_word in stop_words]
+    
+    preprocessed_word_list = []
+    for sentence in words:
+        preprocessed_word_list.append([word for word in sentence if word not in stop_words])
+    # print(preprocessed_word_list)
+
+    return preprocessed_word_list
+
 def word_divider(text):
     sentenceDividers = ['।', '|', '!', '\n', '?',":"]
     sentences = split_text_by_dividers(text=text,dividers=sentenceDividers)
@@ -32,17 +44,5 @@ def word_divider(text):
 
     preprocessed_word_list = stopword_removal(words)
     # print(preprocessed_word_list)
-    return preprocessed_word_list
-
-def stopword_removal(words):
-    stop_word_file = open("stopwords.txt","r",encoding="utf8")
-    stop_words = stop_word_file.readlines()
-    stop_words = [stop_word.split('\n')[0] for stop_word in stop_words]
-    
-    preprocessed_word_list = []
-    for sentence in words:
-        preprocessed_word_list.append([word for word in sentence if word not in stop_words])
-    # print(preprocessed_word_list)
-
-    return preprocessed_word_list
+    return sentences, preprocessed_word_list
 
