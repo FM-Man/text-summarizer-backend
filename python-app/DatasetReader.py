@@ -24,8 +24,11 @@ def read_vectors_from_objectfile():
 
 def read_vector():
     if not os.path.exists('pydic.dic'):
-        data = read_vectors_from_plaintext('..\\java-app\\cc.bn.300.vec')
-        return data
+        if not os.path.exists('..\\java-app\\cc.bn.300.vec'):
+            print('dataset doesnot exist. download from https://drive.google.com/file/d/1qSjqzygv8_T7LC_S21nCvv_x_Rt-BkK5/view?usp=sharing')
+        else:
+            data = read_vectors_from_plaintext('..\\java-app\\cc.bn.300.vec')
+            return data
     else:
         data = read_vectors_from_objectfile()
         return data
