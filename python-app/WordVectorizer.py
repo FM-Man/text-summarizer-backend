@@ -1,5 +1,5 @@
 def vectorizer(dataset,sentences):
-    vectors =[]
+    vectors ={}
     total_sentence = 0
 
     for sentence in sentences:
@@ -25,7 +25,7 @@ def vectorizer(dataset,sentences):
                     index_of_dimension += 1
             # adding positional data
             average_vector.append(total_sentence/len(sentences))
-            vectors.append((total_sentence,average_vector))
+            vectors[total_sentence] = vectors_of_words_in_sentence
         
         total_sentence+=1
     

@@ -6,9 +6,8 @@ from collections import defaultdict
 
 def spectral_clustering(sent_vecors):
     sigma = 10
-    vectors=[]
-    for (i,v) in sent_vecors:
-        vectors.append(v)
+    vectors=[value for value in sent_vecors.values()]
+    keys =[key for key in sent_vecors.keyes()]
     
     affinity_matrix = exp(- pairwise_distances(vectors, squared=True) / ( sigma ** 2))
 
@@ -22,7 +21,6 @@ def spectral_clustering(sent_vecors):
     cluster_org_indices = defaultdict(list)
     for idx, label in enumerate(model.labels_):
         cluster_indices[label].append(idx)
-        (i,v) = sent_vecors[idx]
-        cluster_org_indices[label].append(i)
+        cluster_org_indices[label].append(keys[idx])
 
     return cluster_org_indices
