@@ -33,4 +33,4 @@ def read_vector():
         data = read_vectors_from_objectfile()
         return data
 
-read_vector()
+# read_vector()
