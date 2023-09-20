@@ -12,7 +12,8 @@ def vectorizer(dataset,sentences):
                 vectors_of_words_in_sentence.append(vector)
                 word_in_the_sentence += 1    
             except KeyError:
-                print(f'{word} not found in the model, skipping...')
+                # print(f'{word} not found in the model, skipping...')
+                x=1
         
         
         if word_in_the_sentence != 0:

@@ -7,7 +7,7 @@ from collections import defaultdict
 def spectral_clustering(sent_vecors):
     sigma = 10
     vectors=[value[0] for value in sent_vecors.values()]
-    print(vectors[3])
+    # print(vectors[3])
     keys =[key for key in sent_vecors.keys()]
     
     affinity_matrix = exp(- pairwise_distances(vectors, squared=True) / ( sigma ** 2))

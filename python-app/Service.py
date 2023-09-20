@@ -8,7 +8,7 @@ from SentenceExtraction import get_most_connected_sentence
 def getSummary(text):
     sentences,splited_sentences = word_divider(text)
     vector_space = get_resource()
-    print(vector_space['বাংলা'])
+    # print(vector_space['বাংলা'])
     vectors_with_sentence_index = vectorizer(vector_space , splited_sentences)
     
     # print(words)
@@ -17,15 +17,15 @@ def getSummary(text):
     # Print the cluster indices
     # and pick the best from the clusters
     for cluster_idx, indices in clustered_indeces.items():
-        print(f"Cluster {cluster_idx}: {indices}")
-        for index in indices:
-            print(sentences[index])
-        print('=================picked========================')
+        # print(f"Cluster {cluster_idx}: {indices}")
+        # for index in indices:
+            # print(sentences[index])
+        # print('=================picked========================')
         picked_indx = get_most_connected_sentence(indices,vectors_with_sentence_index)
         # print(picked_indx)
-        print(sentences[picked_indx])
+        # print(sentences[picked_indx])
         summary_indices.append(picked_indx)
-        print('===============================================')
+        # print('===============================================')
         
     summary_indices.sort()
     summary = ''
