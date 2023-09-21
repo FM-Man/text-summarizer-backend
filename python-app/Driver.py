@@ -10,6 +10,7 @@ print(len(evaluation_dictionary['documents']))
 print(len(evaluation_dictionary['summary']))
 
 results = {}
+results_for_excell={}
 for index in range(len(evaluation_dictionary['documents'])):
     print(index)
     
@@ -17,6 +18,7 @@ for index in range(len(evaluation_dictionary['documents'])):
     reference = evaluation_dictionary['summary'][2*index]
     score = rouge.get_scores(summary,reference)[0]
     results[f'doc_{index+1}_sum_1']=score
+    
 
     summary = getSummary(evaluation_dictionary['documents'][index])
     reference = evaluation_dictionary['summary'][2*index+1]
