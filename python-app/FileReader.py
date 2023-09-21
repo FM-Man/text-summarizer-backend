@@ -16,7 +16,6 @@ def read_files():
             with open(f, 'r', encoding="utf8", errors='ignore') as filef:
                 file_text = filef.read().split('ext:')[1]
                 documents_list.append(file_text)
-                documents_list.append(file_text)
         else:
             print(f'{f} not found')
         
@@ -28,7 +27,7 @@ def read_files():
             print(f'{s1} not found')
         
         if os.path.exists(s2):
-            with open(s2, 'r', encoding="utf8", errors='ignore') as files2:
+            with open(s2, 'r', encoding="utf-16-le", errors='ignore') as files2:
                 file_text = files2.read()
                 summary_list.append(file_text)
         else:
