@@ -3,6 +3,7 @@ from sklearn.metrics import pairwise_distances
 from numpy import exp
 from math import ceil
 from collections import defaultdict
+from expDistance import get_exp_distance
 
 def spectral_clustering(sent_vecors):
     sigma = 10
@@ -25,3 +26,28 @@ def spectral_clustering(sent_vecors):
         cluster_org_indices[label].append(keys[idx])
 
     return cluster_org_indices
+
+
+def exp_spectral_clustering(sent_vectors_position):
+    total_sentence = len(sent_vectors_position)
+    affinity_matrix = []
+    for i in range(0,total_sentence):
+        row = [0]*total_sentence
+        affinity_matrix.append(row)
+
+    for i in range(0,total_sentence):
+        for j in range(i,total_sentence):
+            affinity_matrix[i][j] = get_exp_distance(sent_vectors_position[i],sent_vectors_position[j])
+            affinity_matrix[j][i] = get_exp_distance(sent_vectors_position[i],sent_vectors_position[j])
+    
+    model = SpectralClustering(n_clusters=ceil(total_sentence/4), affinity='precomputed')
+    model.fit(affinity_matrix)
+    cluster_indices = defaultdict(list)
+    for idx, label in enumerate(model.labels_):
+        cluster_indices[label].append(idx)
+    
+    return cluster_indices
+
+
+
+

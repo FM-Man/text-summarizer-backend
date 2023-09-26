@@ -12,8 +12,8 @@ def vectorizer(dataset,sentences):
                 vectors_of_words_in_sentence.append(vector)
                 word_in_the_sentence += 1    
             except KeyError:
-                # print(f'{word} not found in the model, skipping...')
-                x=1
+                print(f'{word} not found in the model, skipping...')
+                
         
         
         if word_in_the_sentence != 0:
@@ -31,3 +31,28 @@ def vectorizer(dataset,sentences):
         total_sentence+=1
     
     return vectors
+
+
+
+def exp_vectorizer(dataset,sentences):
+    vectors = []
+    sentence_index = 0
+    total_sentence = len(sentences)
+
+    for sentence in sentences:
+        vectors_of_words_in_sentence=[]
+        for word in sentence:
+            try:
+                vector = dataset[word]
+                vectors_of_words_in_sentence.append(vector)    
+            except KeyError:
+                print(f'{word} not found in the model, skipping...')
+        sentence_index += 1
+        vectors.append((sentence_index/total_sentence , vectors_of_words_in_sentence))
+    
+    return vectors
+
+
+
+
+
