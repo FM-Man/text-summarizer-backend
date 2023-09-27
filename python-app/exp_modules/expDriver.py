@@ -1,6 +1,6 @@
-from expService import getSummary
+from exp_modules.expService import getSummary
 from rouge import Rouge
-from FileReader import read_files
+from common_utils.FileReader import read_files
 import json
 
 rouge = Rouge()
@@ -11,6 +11,7 @@ print(len(evaluation_dictionary['summary']))
 
 results = {}
 results_for_excell={}
+
 for index in range(len(evaluation_dictionary['documents'])):
     print(index)
     
@@ -27,7 +28,7 @@ for index in range(len(evaluation_dictionary['documents'])):
 
 
 
-with open('exp_output.json', 'w') as filehandle:
+with open('output/exp_output.json', 'w') as filehandle:
     json.dump(results, filehandle)
 
 avg_result = {
@@ -60,5 +61,5 @@ for result in results.values():
     avg_result["rouge-l"]["f"] += (1/length) * result["rouge-l"]["f"]
 
 
-with open('avg_exp_output.json', 'w') as filehandle:
+with open('output/avg_exp_output.json', 'w') as filehandle:
     json.dump(avg_result, filehandle)

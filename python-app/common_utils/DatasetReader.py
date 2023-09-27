@@ -8,7 +8,7 @@ def read_vectors_from_plaintext(vec_file_path):
     print('dictionary done')
 
     # saving the data into file
-    filePath = 'pydic.dic'
+    filePath = 'datsets/pydic.dic'
     with open(filePath, "wb") as file:
         pickle.dump(model, file)
     print('saving done')
@@ -16,18 +16,18 @@ def read_vectors_from_plaintext(vec_file_path):
     return model
 
 def read_vectors_from_objectfile():
-    file_path = 'pydic.dic'
+    file_path = 'datsets/pydic.dic'
     with open(file_path, "rb") as file:
         data = pickle.load(file)
     print('reading done')
     return data
 
 def read_vector():
-    if not os.path.exists('pydic.dic'):
-        if not os.path.exists('..\\java-app\\cc.bn.300.vec'):
+    if not os.path.exists('datsets/pydic.dic'):
+        if not os.path.exists('datsets/cc.bn.300.vec'):
             print('dataset doesnot exist. download from https://drive.google.com/file/d/1qSjqzygv8_T7LC_S21nCvv_x_Rt-BkK5/view?usp=sharing')
         else:
-            data = read_vectors_from_plaintext('..\\java-app\\cc.bn.300.vec')
+            data = read_vectors_from_plaintext('datsets/cc.bn.300.vec')
             return data
     else:
         data = read_vectors_from_objectfile()

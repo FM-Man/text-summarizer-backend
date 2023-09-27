@@ -35,3 +35,5 @@ build/
 java-app/cc.bn.300.vec
 java-app/wordVectorData.obj
 python-app/pydic.dic
+python-app/datasets/pydic.dic
+python-app/datasets/cc.bn.300.vec

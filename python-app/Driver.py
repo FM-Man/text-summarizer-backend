@@ -1,6 +1,6 @@
 from Service import getSummary
 from rouge import Rouge
-from FileReader import read_files
+from common_utils.FileReader import read_files
 import json
 
 rouge = Rouge()
@@ -27,7 +27,7 @@ for index in range(len(evaluation_dictionary['documents'])):
 
 
 
-with open('output.json', 'w') as filehandle:
+with open('output/output.json', 'w') as filehandle:
     json.dump(results, filehandle)
 
 avg_result = {
@@ -60,5 +60,5 @@ for result in results.values():
     avg_result["rouge-l"]["f"] += (1/length) * result["rouge-l"]["f"]
 
 
-with open('avg_output.json', 'w') as filehandle:
+with open('output/avg_output.json', 'w') as filehandle:
     json.dump(avg_result, filehandle)

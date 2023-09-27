@@ -1,9 +1,9 @@
-from Preprocessor import word_divider
-from DatasetReader import read_vector
-from WordVectorizer import exp_vectorizer
-from Clusterer import exp_spectral_clustering
+from common_utils.Preprocessor import word_divider
+from common_utils.DatasetReader import read_vector
+from common_utils.WordVectorizer import exp_vectorizer
+from common_utils.Clusterer import exp_spectral_clustering
 from functools import lru_cache
-from SentenceExtraction import get_most_connected_sentence
+from common_utils.SentenceExtraction import get_most_connected_sentence
 
 def getSummary(text):
     sentences,splited_sentences = word_divider(text)

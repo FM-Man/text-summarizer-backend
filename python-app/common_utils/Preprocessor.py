@@ -19,7 +19,7 @@ def split_text_by_dividers(text, dividers):
     return sentences
 
 def stopword_removal(words):
-    stop_word_file = open("stopwords.txt","r",encoding="utf8")
+    stop_word_file = open("datasets/stopwords.txt","r",encoding="utf8")
     stop_words = stop_word_file.readlines()
     stop_words = [stop_word.split('\n')[0] for stop_word in stop_words]
     

@@ -3,7 +3,7 @@ from sklearn.metrics import pairwise_distances
 from numpy import exp
 from math import ceil
 from collections import defaultdict
-from expDistance import get_exp_distance
+from exp_modules.expDistance import get_exp_distance
 
 def spectral_clustering(sent_vecors):
     sigma = 10
