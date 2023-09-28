@@ -11,20 +11,39 @@ print(len(evaluation_dictionary['summary']))
 
 results = {}
 results_for_excell={}
+summary_collection = {}
 for index in range(len(evaluation_dictionary['documents'])):
     print(index)
     
+    ind_doc_summary={}
+    ind_doc_summary[f'document'] = evaluation_dictionary['documents'][index]
+    
+    ############################################################
     summary = getSummary(evaluation_dictionary['documents'][index])
+    ind_doc_summary['summary_1'] = summary
+
     reference = evaluation_dictionary['summary'][2*index]
+    ind_doc_summary['referece_1'] = reference
+
     score = rouge.get_scores(summary,reference)[0]
     results[f'doc_{index+1}_sum_1']=score
     
-
+    ############################################################
     summary = getSummary(evaluation_dictionary['documents'][index])
+    ind_doc_summary['summary_2'] = summary
+
     reference = evaluation_dictionary['summary'][2*index+1]
+    ind_doc_summary['referece_2'] = reference
+
     score = rouge.get_scores(summary,reference)[0]
     results[f'doc_{index+1}_sum_2']=score
+    
+    ###########################################################
+    summary_collection[f'document_{index}'] = ind_doc_summary
 
+
+with open('output/summary.json', 'w', encoding="utf-8") as filehandle:
+    json.dump(summary_collection, filehandle)
 
 
 with open('output/output.json', 'w') as filehandle:
