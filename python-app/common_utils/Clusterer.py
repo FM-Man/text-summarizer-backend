@@ -13,7 +13,7 @@ def spectral_clustering(sent_vecors):
     
     affinity_matrix = exp(- pairwise_distances(vectors, squared=True) / ( sigma ** 2))
 
-    n_clusters = ceil(len(sent_vecors)/4)
+    n_clusters = ceil(len(sent_vecors)/5)
     
     model = SpectralClustering(n_clusters=n_clusters, affinity='precomputed')
     # Fit the model to the data
@@ -40,7 +40,7 @@ def exp_spectral_clustering(sent_vectors_position):
             affinity_matrix[i][j] = get_exp_distance(sent_vectors_position[i],sent_vectors_position[j])
             affinity_matrix[j][i] = get_exp_distance(sent_vectors_position[i],sent_vectors_position[j])
     
-    model = SpectralClustering(n_clusters=ceil(total_sentence/4), affinity='precomputed')
+    model = SpectralClustering(n_clusters=ceil(total_sentence/5), affinity='precomputed')
     model.fit(affinity_matrix)
     cluster_indices = defaultdict(list)
     for idx, label in enumerate(model.labels_):
