@@ -37,7 +37,7 @@ def word_divider(text):
     # for idx, sentence in enumerate(sentences):
     #     print(f"Sentence {idx + 1}: {sentence}")
     
-    wordDividers = [' ', ',', '.', ';', '"', "'", '`','(',')','[',']','-','‘','’‌','%']
+    wordDividers = [' ', ',', '.', ';', '"', "'", '`','(',')','[',']','-','‘','’‌','%','/','\\']
     words=[]
     for sentence in sentences:
         words.append(split_text_by_dividers(sentence,wordDividers))
