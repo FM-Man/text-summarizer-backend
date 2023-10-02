@@ -92,7 +92,7 @@ rouge = Rouge()
 
 
 evaluation_dictionary = {}
-with open('datasets/BangladeshNewsData.json','r',encoding='utf-8') as newsjson:
+with open('datasets/allNews.json','r',encoding='utf-8') as newsjson:
     evaluation_dictionary = json.load(newsjson)
 
 
@@ -121,11 +121,11 @@ for index in range(len(evaluation_dictionary)):
     exp_summary[f'document_{index}'] = ind_doc_summary
 
 
-with open('output/exp_summary_BangladeshNewsData.json', 'w', encoding="utf-8") as filehandle:
+with open('output/exp_summary_allNewsData.json', 'w', encoding="utf-8") as filehandle:
     json.dump(exp_summary, filehandle)
 
 
-with open('output/exp_rogue_output_BangladeshNewsData.json', 'w') as filehandle:
+with open('output/exp_rogue_output_allNewsData.json', 'w') as filehandle:
     json.dump(results, filehandle)
 
 avg_result = {
@@ -158,6 +158,6 @@ for result in results.values():
     avg_result["rouge-l"]["f"] += (1/length) * result["rouge-l"]["f"]
 
 
-with open('output/avg_exp_rogue_output_BangladeshNewsData.json', 'w') as filehandle:
+with open('output/avg_exp_rogue_output_allNewsData.json', 'w') as filehandle:
     json.dump(avg_result, filehandle)
 
