@@ -38,3 +38,4 @@ python-app/pydic.dic
 python-app/datasets/pydic.dic
 python-app/datasets/cc.bn.300.vec
 python-app/output/exp_summary_allNewsData.json
+python-app/output/exp/twelve/exp_summary_allNewsData.json

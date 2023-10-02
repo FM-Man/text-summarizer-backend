@@ -5,14 +5,14 @@ from common_utils.Clusterer import exp_spectral_clustering
 from functools import lru_cache
 from common_utils.SentenceExtraction import get_most_connected_sentence
 
-def getSummary(text):
+def getSummary(text, n_cluster):
     sentences,splited_sentences = word_divider(text)
     vector_space = get_resource()
     
     vectors_with_position = exp_vectorizer(vector_space , splited_sentences)
     
     # print(words)
-    clustered_indeces = exp_spectral_clustering(vectors_with_position)
+    clustered_indeces = exp_spectral_clustering(vectors_with_position, n_cluster)
     summary_indices=[]
     # Print the cluster indices
     # and pick the best from the clusters

@@ -98,70 +98,74 @@ with open('datasets/allNews.json','r',encoding='utf-8') as newsjson:
 
 results = {}
 results_for_excell={}
-exp_summary = {}
+# exp_summary = {}
 
 
-for index in range(12483):
-    print(index)
-    if index == 8112 or index == 12483:
-        pass
-    else:
-        ind_doc_summary={}
-        ind_doc_summary['document'] = evaluation_dictionary[f'doc_{index+1}']["Description"]
-        
-        ############################################################
-        summary = getSummary(evaluation_dictionary[f'doc_{index+1}']["Description"])
-        ind_doc_summary['summary'] = summary
-        
+for index in range(12400):
+    results[f'doc_{index+1}']={}
 
-        reference = evaluation_dictionary[f'doc_{index+1}']['Meta-Summary']
-        ind_doc_summary['referece'] = reference
+    for ncluster in range(2,9):
+        if index == 8112 or index == 12483:
+            pass
+        else:
+            ind_doc_summary={}
+            ind_doc_summary['document'] = evaluation_dictionary[f'doc_{index+1}']["Description"]
+            
+            ############################################################
+            summary = getSummary(evaluation_dictionary[f'doc_{index+1}']["Description"] , n_cluster=ncluster)
+            # ind_doc_summary['summary'] = summary
+            
 
-        if(summary.strip() and reference.strip()):
-            score = rouge.get_scores(summary,reference)[0]
-            results[f'doc_{index+1}']=score
-        
-        ###########################################################
-        exp_summary[f'document_{index}'] = ind_doc_summary
+            reference = evaluation_dictionary[f'doc_{index+1}']['Meta-Summary']
+            # ind_doc_summary['referece'] = reference
+
+            if(summary.strip() and reference.strip()):
+                score = rouge.get_scores(summary,reference)[0]
+                results[f'doc_{index+1}'][ncluster]=score
+            
+
+            print(f'{index} - {ncluster}')
+            ###########################################################
+            # exp_summary[f'document_{index}'] = ind_doc_summary
 
 
-with open('output/exp_summary_allNewsData.json', 'w', encoding="utf-8") as filehandle:
-    json.dump(exp_summary, filehandle)
+# with open('output/exp_summary_allNewsData.json', 'w', encoding="utf-8") as filehandle:
+#     json.dump(exp_summary, filehandle)
 
 
 with open('output/exp_rogue_output_allNewsData.json', 'w') as filehandle:
     json.dump(results, filehandle)
 
-avg_result = {
-    "rouge-1":{
-        "r": 0.0,
-        "p": 0.0,
-        "f": 0.0
-    },
-    "rouge-2": {
-        "r": 0.0,
-        "p": 0.0,
-        "f": 0.0
-    },
-    "rouge-l": {
-        "r": 0.0,
-        "p": 0.0,
-        "f": 0.0
-    }
-}
-length = len(results.values())
-for result in results.values():
-    avg_result["rouge-1"]["r"] += (1/length) * result["rouge-1"]["r"]
-    avg_result["rouge-1"]["p"] += (1/length) * result["rouge-1"]["p"]
-    avg_result["rouge-1"]["f"] += (1/length) * result["rouge-1"]["f"]
-    avg_result["rouge-2"]["r"] += (1/length) * result["rouge-2"]["r"]
-    avg_result["rouge-2"]["p"] += (1/length) * result["rouge-2"]["p"]
-    avg_result["rouge-2"]["f"] += (1/length) * result["rouge-2"]["f"]
-    avg_result["rouge-l"]["r"] += (1/length) * result["rouge-l"]["r"]
-    avg_result["rouge-l"]["p"] += (1/length) * result["rouge-l"]["p"]
-    avg_result["rouge-l"]["f"] += (1/length) * result["rouge-l"]["f"]
+# avg_result = {
+#     "rouge-1":{
+#         "r": 0.0,
+#         "p": 0.0,
+#         "f": 0.0
+#     },
+#     "rouge-2": {
+#         "r": 0.0,
+#         "p": 0.0,
+#         "f": 0.0
+#     },
+#     "rouge-l": {
+#         "r": 0.0,
+#         "p": 0.0,
+#         "f": 0.0
+#     }
+# }
+# length = len(results.values())
+# for result in results.values():
+#     avg_result["rouge-1"]["r"] += (1/length) * result["rouge-1"]["r"]
+#     avg_result["rouge-1"]["p"] += (1/length) * result["rouge-1"]["p"]
+#     avg_result["rouge-1"]["f"] += (1/length) * result["rouge-1"]["f"]
+#     avg_result["rouge-2"]["r"] += (1/length) * result["rouge-2"]["r"]
+#     avg_result["rouge-2"]["p"] += (1/length) * result["rouge-2"]["p"]
+#     avg_result["rouge-2"]["f"] += (1/length) * result["rouge-2"]["f"]
+#     avg_result["rouge-l"]["r"] += (1/length) * result["rouge-l"]["r"]
+#     avg_result["rouge-l"]["p"] += (1/length) * result["rouge-l"]["p"]
+#     avg_result["rouge-l"]["f"] += (1/length) * result["rouge-l"]["f"]
 
 
-with open('output/avg_exp_rogue_output_allNewsData.json', 'w') as filehandle:
-    json.dump(avg_result, filehandle)
+# with open('output/avg_exp_rogue_output_allNewsData.json', 'w') as filehandle:
+#     json.dump(avg_result, filehandle)
 
