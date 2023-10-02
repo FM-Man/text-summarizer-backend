@@ -99,9 +99,11 @@ with open('datasets/allNews.json','r',encoding='utf-8') as newsjson:
 results = {}
 results_for_excell={}
 exp_summary = {}
-for index in range(len(evaluation_dictionary)):
+
+
+for index in range(12483):
     print(index)
-    if index == 8112:
+    if index == 8112 or index == 12483:
         pass
     else:
         ind_doc_summary={}

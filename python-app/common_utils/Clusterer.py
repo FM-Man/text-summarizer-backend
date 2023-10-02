@@ -50,7 +50,8 @@ def exp_spectral_clustering(sent_vectors_position):
     
         return cluster_indices
     
-    else return 
+    else:
+        return []
 
 
 
