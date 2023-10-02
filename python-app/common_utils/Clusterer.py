@@ -40,8 +40,11 @@ def exp_spectral_clustering(sent_vectors_position, n_cluster):
             affinity_matrix[i][j] = get_exp_distance(sent_vectors_position[i],sent_vectors_position[j])
             affinity_matrix[j][i] = get_exp_distance(sent_vectors_position[i],sent_vectors_position[j])
     
+
+    cluster_number = min(n_cluster,ceil(total_sentence/2))
+
     if len(affinity_matrix) > 1:
-        model = SpectralClustering(n_clusters=n_cluster, affinity='precomputed')
+        model = SpectralClustering(n_clusters=cluster_number, affinity='precomputed')
         model.fit(affinity_matrix)
     
         cluster_indices = defaultdict(list)
