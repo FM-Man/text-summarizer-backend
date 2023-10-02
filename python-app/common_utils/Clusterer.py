@@ -44,11 +44,13 @@ def exp_spectral_clustering(sent_vectors_position):
         model = SpectralClustering(n_clusters=ceil(total_sentence/6), affinity='precomputed')
         model.fit(affinity_matrix)
     
-    cluster_indices = defaultdict(list)
-    for idx, label in enumerate(model.labels_):
-        cluster_indices[label].append(idx)
+        cluster_indices = defaultdict(list)
+        for idx, label in enumerate(model.labels_):
+            cluster_indices[label].append(idx)
     
-    return cluster_indices
+        return cluster_indices
+    
+    else return 
 
 
 

@@ -101,24 +101,26 @@ results_for_excell={}
 exp_summary = {}
 for index in range(len(evaluation_dictionary)):
     print(index)
-    
-    ind_doc_summary={}
-    ind_doc_summary['document'] = evaluation_dictionary[f'doc_{index+1}']["Description"]
-    
-    ############################################################
-    summary = getSummary(evaluation_dictionary[f'doc_{index+1}']["Description"])
-    ind_doc_summary['summary'] = summary
-    
+    if index == 8112:
+        pass
+    else:
+        ind_doc_summary={}
+        ind_doc_summary['document'] = evaluation_dictionary[f'doc_{index+1}']["Description"]
+        
+        ############################################################
+        summary = getSummary(evaluation_dictionary[f'doc_{index+1}']["Description"])
+        ind_doc_summary['summary'] = summary
+        
 
-    reference = evaluation_dictionary[f'doc_{index+1}']['Meta-Summary']
-    ind_doc_summary['referece'] = reference
+        reference = evaluation_dictionary[f'doc_{index+1}']['Meta-Summary']
+        ind_doc_summary['referece'] = reference
 
-    if(summary.strip() and reference.strip()):
-        score = rouge.get_scores(summary,reference)[0]
-        results[f'doc_{index+1}']=score
-    
-    ###########################################################
-    exp_summary[f'document_{index}'] = ind_doc_summary
+        if(summary.strip() and reference.strip()):
+            score = rouge.get_scores(summary,reference)[0]
+            results[f'doc_{index+1}']=score
+        
+        ###########################################################
+        exp_summary[f'document_{index}'] = ind_doc_summary
 
 
 with open('output/exp_summary_allNewsData.json', 'w', encoding="utf-8") as filehandle:
