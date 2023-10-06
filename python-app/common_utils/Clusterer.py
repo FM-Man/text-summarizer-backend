@@ -28,7 +28,7 @@ def spectral_clustering(sent_vecors):
     return cluster_org_indices
 
 
-def exp_spectral_clustering(sent_vectors_position, n_cluster):
+def exp_spectral_clustering(sent_vectors_position):
     total_sentence = len(sent_vectors_position)
     affinity_matrix = []
     for i in range(0,total_sentence):
@@ -36,12 +36,12 @@ def exp_spectral_clustering(sent_vectors_position, n_cluster):
         affinity_matrix.append(row)
 
     for i in range(0,total_sentence):
-        for j in range(i,total_sentence):
+        for j in range(i+1,total_sentence):
             affinity_matrix[i][j] = get_exp_distance(sent_vectors_position[i],sent_vectors_position[j])
             affinity_matrix[j][i] = get_exp_distance(sent_vectors_position[i],sent_vectors_position[j])
     
 
-    cluster_number = min(n_cluster,ceil(total_sentence/2))
+    cluster_number = ceil(total_sentence/4)
 
     if len(affinity_matrix) > 1:
         model = SpectralClustering(n_clusters=cluster_number, affinity='precomputed')

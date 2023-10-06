@@ -12,6 +12,17 @@ def get_exp_distance(tuple1, tuple2):
     pos1,cluster1 = tuple1
     pos2,cluster2 = tuple2
 
+    # for vect1 in cluster1:
+    #     closest_vector = min(cluster2, key=lambda v: get_euclidean_distance(vect1,v))
+    #     distances.append(get_euclidean_distance(vect1,closest_vector))
+    
+    # for vect1 in cluster2:
+    #     closest_vector = min(cluster1, key=lambda v: get_euclidean_distance(vect1,v))
+    #     distances.append(get_euclidean_distance(vect1,closest_vector))
+    distances=[]
+    pos1,cluster1 = tuple1
+    pos2,cluster2 = tuple2
+
     for vect1 in cluster1:
         min_dist = float('inf')
         for vect2 in cluster2:
