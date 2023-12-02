@@ -30,7 +30,7 @@ def rank_sentence(cluster, word_vectors):
     
     min_index = centerity.index(min(centerity))
 
-    return min_index
+    return cluster[min_index]
 
             
 
