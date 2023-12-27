@@ -39,33 +39,34 @@ def getSummary(text):
 def get_resource():
     return read_vector()
 
-####################################################################################################
-####################################################################################################
-####################################################################################################
 
-def get_summary_unranked_sigma(text,sigma):
+
+def get_summary_unranked_sigma(text, sigma=2):
     sentences,splited_sentences = word_divider(text)
     vector_space = get_resource()
     
     vectors_with_position = exp_vectorizer(vector_space , splited_sentences)
     
-    # print(words)
     clustered_indeces = exp_spectral_clustering_sigma(vectors_with_position,sigma)
     summary_indices=[]
-    # Print the cluster indices
-    # and pick the best from the clusters
+
     for cluster_idx, indices in clustered_indeces.items():
         
         picked_indx = indices[0]
         
         summary_indices.append(picked_indx)
         
-    summary_indices.sort()
+
+    for i in range(len(summary_indices)):
+        for j in range(i+1,len(summary_indices)):
+            if summary_indices[i]>summary_indices[j]:
+                summary_indices[i],summary_indices[j] = summary_indices[j],summary_indices[i]
+
     summary = ''
     for indx in summary_indices:
         summary+=sentences[indx]+'। '
     
-    return summary
+    return summary_indices,summary
 
 
 

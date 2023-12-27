@@ -1,208 +1,109 @@
-from exp_modules.expService import get_summary_ranked_sigma,get_summary_unranked_sigma,getSummary
+from exp_modules.expService import get_summary_unranked_sigma as get_akon_summary
+from Service import getSummary as get_ksarkar_summary
 from rouge import Rouge
 from common_utils.FileReader import read_files
 import json
+from common_utils.Preprocessor import word_divider
+from math import ceil
+from random import shuffle
+import numpy as np 
+
+
+
+def random_summary(text):
+    sentences,splited_sentences = word_divider(text)
+    n = ceil(len(sentences)/4)
+    indexlist=list(range(0,len(sentences)))
+    shuffle(indexlist)
+    nparray = np.array(indexlist)
+    summary_indices = nparray[0:n].tolist()
+    # picked.sort()
+    
+    for i in range(len(summary_indices)):
+        for j in range(i+1,len(summary_indices)):
+            if summary_indices[i]>summary_indices[j]:
+                summary_indices[i],summary_indices[j] = summary_indices[j],summary_indices[i]
+
+    summary = ''
+    for indx in summary_indices:
+        summary+=sentences[indx]+'। '
+    
+    return summary_indices,summary
+
+    
+
+
+
+
 
 rouge = Rouge()
 
-# evaluation_dictionary = read_files()
-# print(len(evaluation_dictionary['documents']))
-# print(len(evaluation_dictionary['summary']))
-
-# results = {}
-# results_for_excell={}
-# summary_collection = {}
-# for index in range(len(evaluation_dictionary['documents'])):
-#     print(index)
-    
-#     ind_doc_summary={}
-#     ind_doc_summary[f'document'] = evaluation_dictionary['documents'][index]
-    
-#     ############################################################
-#     summary = getSummary(evaluation_dictionary['documents'][index])
-#     ind_doc_summary['summary_1'] = summary
-
-#     reference = evaluation_dictionary['summary'][2*index]
-#     ind_doc_summary['referece_1'] = reference
-
-#     score = rouge.get_scores(summary,reference)[0]
-#     results[f'doc_{index+1}_sum_1']=score
-    
-#     ############################################################
-#     summary = getSummary(evaluation_dictionary['documents'][index])
-#     ind_doc_summary['summary_2'] = summary
-
-#     reference = evaluation_dictionary['summary'][2*index+1]
-#     ind_doc_summary['referece_2'] = reference
-
-#     score = rouge.get_scores(summary,reference)[0]
-#     results[f'doc_{index+1}_sum_2']=score
-    
-#     ###########################################################
-#     summary_collection[f'document_{index}'] = ind_doc_summary
-
-
-# with open('output/summary.json', 'w', encoding="utf-8") as filehandle:
-#     json.dump(summary_collection, filehandle)
-
-
-# with open('output/output.json', 'w') as filehandle:
-#     json.dump(results, filehandle)
-
-# avg_result = {
-#     "rouge-1":{
-#         "r": 0.0,
-#         "p": 0.0,
-#         "f": 0.0
-#     },
-#     "rouge-2": {
-#         "r": 0.0,
-#         "p": 0.0,
-#         "f": 0.0
-#     },
-#     "rouge-l": {
-#         "r": 0.0,
-#         "p": 0.0,
-#         "f": 0.0
-#     }
-# }
-# length = len(results.values())
-# for result in results.values():
-#     avg_result["rouge-1"]["r"] += (1/length) * result["rouge-1"]["r"]
-#     avg_result["rouge-1"]["p"] += (1/length) * result["rouge-1"]["p"]
-#     avg_result["rouge-1"]["f"] += (1/length) * result["rouge-1"]["f"]
-#     avg_result["rouge-2"]["r"] += (1/length) * result["rouge-2"]["r"]
-#     avg_result["rouge-2"]["p"] += (1/length) * result["rouge-2"]["p"]
-#     avg_result["rouge-2"]["f"] += (1/length) * result["rouge-2"]["f"]
-#     avg_result["rouge-l"]["r"] += (1/length) * result["rouge-l"]["r"]
-#     avg_result["rouge-l"]["p"] += (1/length) * result["rouge-l"]["p"]
-#     avg_result["rouge-l"]["f"] += (1/length) * result["rouge-l"]["f"]
-
-
-# with open('output/avg_output.json', 'w') as filehandle:
-#     json.dump(avg_result, filehandle)
-
-
-###########################################################################
-##########################################################################
-##########################################################################
-#########################################################################
-
-
-
-# evaluation_dictionary = {}
-# with open('datasets/BangladeshNewsData.json','r',encoding='utf-8') as newsjson:
-#     evaluation_dictionary = json.load(newsjson)
-
-
-# results = {}
-# results_for_excell={}
-# exp_summary = {}
-# for index in range(len(evaluation_dictionary)):
-#     print(index)
-    
-#     ind_doc_summary={}
-#     ind_doc_summary['document'] = evaluation_dictionary[f'doc_{index+1}']["Description"]
-    
-#     ############################################################
-#     summary = getSummary(evaluation_dictionary[f'doc_{index+1}']["Description"])
-#     ind_doc_summary['summary'] = summary
-    
-
-#     reference = evaluation_dictionary[f'doc_{index+1}']['Meta-Summary']
-#     ind_doc_summary['referece'] = reference
-
-#     if(summary.strip() and reference.strip()):
-#         score = rouge.get_scores(summary,reference)[0]
-#         results[f'doc_{index+1}']=score
-    
-#     ###########################################################
-#     exp_summary[f'document_{index}'] = ind_doc_summary
-
-
-# with open('output/summary_BangladeshNewsData.json', 'w', encoding="utf-8") as filehandle:
-#     json.dump(exp_summary, filehandle)
-
-
-# with open('output/rogue_output_BangladeshNewsData.json', 'w') as filehandle:
-#     json.dump(results, filehandle)
-
-# avg_result = {
-#     "rouge-1":{
-#         "r": 0.0,
-#         "p": 0.0,
-#         "f": 0.0
-#     },
-#     "rouge-2": {
-#         "r": 0.0,
-#         "p": 0.0,
-#         "f": 0.0
-#     },
-#     "rouge-l": {
-#         "r": 0.0,
-#         "p": 0.0,
-#         "f": 0.0
-#     }
-# }
-# length = len(results.values())
-# for result in results.values():
-#     avg_result["rouge-1"]["r"] += (1/length) * result["rouge-1"]["r"]
-#     avg_result["rouge-1"]["p"] += (1/length) * result["rouge-1"]["p"]
-#     avg_result["rouge-1"]["f"] += (1/length) * result["rouge-1"]["f"]
-#     avg_result["rouge-2"]["r"] += (1/length) * result["rouge-2"]["r"]
-#     avg_result["rouge-2"]["p"] += (1/length) * result["rouge-2"]["p"]
-#     avg_result["rouge-2"]["f"] += (1/length) * result["rouge-2"]["f"]
-#     avg_result["rouge-l"]["r"] += (1/length) * result["rouge-l"]["r"]
-#     avg_result["rouge-l"]["p"] += (1/length) * result["rouge-l"]["p"]
-#     avg_result["rouge-l"]["f"] += (1/length) * result["rouge-l"]["f"]
-
-
-# with open('output/avg_rogue_output_BangladeshNewsData.json', 'w') as filehandle:
-#     json.dump(avg_result, filehandle)
-
-
-
-###########################################################################
-##########################################################################
-##########################################################################
-#########################################################################
-
-
 #reading evaluation dataset
 evaluation_dictionary = {}
-with open('datasets/BangladeshNewsData.json','r',encoding='utf-8') as newsjson:
+with open('datasets/evaluation_dictionary.json','r',encoding='utf-8') as newsjson:
     evaluation_dictionary = json.load(newsjson)
 
-sigmas=[0.01, 0.05, 0.1, 0.25, 0.3, 0.4, 0.5, 0.6, 0.75, 0.8, 0.9, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 30, 40, 50, 60, 75, 100, 200, 500, 1000]
-
-for sigma in sigmas:
-    # unranked
-    results = {}
-    for index in range(len(evaluation_dictionary)):
-        print(f's->{sigma} i-> {index}')
-        
-        summary = get_summary_unranked_sigma( evaluation_dictionary[f'doc_{index+1}']["Description"] , sigma )
-        reference = evaluation_dictionary[f'doc_{index+1}']['Meta-Summary']
-
-        if(summary.strip() and reference.strip()):
-            score = rouge.get_scores(summary,reference)[0]
-            results[f'doc_{index+1}']=score
-    
-    with open(f'output/fine_tuning/sigma{sigma}/unranked_output.json', 'w') as filehandle:
-        json.dump(results, filehandle)
-
-    # ranked
-    for index in range(len(evaluation_dictionary)):
-        print(f's->{sigma} i-> {index}')
-        
-        summary = get_summary_ranked_sigma( evaluation_dictionary[f'doc_{index+1}']["Description"] , sigma )
-        reference = evaluation_dictionary[f'doc_{index+1}']['Meta-Summary']
-
-        if(summary.strip() and reference.strip()):
-            score = rouge.get_scores(summary,reference)[0]
-            results[f'doc_{index+1}']=score
-    
-    with open(f'output/fine_tuning/sigma{sigma}/ranked_output.json', 'w') as filehandle:
-        json.dump(results, filehandle)
 
 
+results = {}
+
+
+# for index in range(0,1000):
+# for index in range(1000,2000):
+# for index in range(2000,3000):
+# for index in range(3000,4000):
+for index in range(4000,len(evaluation_dictionary)):
+    print(index)
+    doc={}    
+    document = evaluation_dictionary[f'{index}']["Description"]
+    doc["document"]= document
+    reference = evaluation_dictionary[f'{index}']['Meta-Summary']
+    doc["human"]=reference
+    akonsum_ind,akonsummary = get_akon_summary( document)
+    doc["akon"]=akonsummary
+    doc["akon_ind"]=akonsum_ind
+    ksarkar_ind,ksarkarsummary=get_ksarkar_summary(document)
+    doc['ksarkar']=ksarkarsummary
+    doc['ksarkar_ind']=ksarkar_ind
+    random_ind,randomsummary=random_summary(document)
+    doc['rand_ind']=random_ind
+    doc['random']=randomsummary
+
+    if reference.strip() :
+        score = rouge.get_scores(akonsummary,reference)[0]
+        doc["akon_r1_r"]=score["rouge-1"]["r"]
+        doc["akon_r1_p"]=score["rouge-1"]["p"]
+        doc["akon_r1_f"]=score["rouge-1"]["f"]
+        doc["akon_r2_r"]=score["rouge-2"]["r"]
+        doc["akon_r2_p"]=score["rouge-2"]["p"]
+        doc["akon_r2_f"]=score["rouge-2"]["f"]
+        doc["akon_rlcs_r"]=score["rouge-l"]["r"]
+        doc["akon_rlcs_p"]=score["rouge-l"]["p"]
+        doc["akon_rlcs_f"]=score["rouge-l"]["f"]
+
+        score = rouge.get_scores(ksarkarsummary,reference)[0]
+        doc["ksarkar_r1_r"]=score["rouge-1"]["r"]
+        doc["ksarkar_r1_p"]=score["rouge-1"]["p"]
+        doc["ksarkar_r1_f"]=score["rouge-1"]["f"]
+        doc["ksarkar_r2_r"]=score["rouge-2"]["r"]
+        doc["ksarkar_r2_p"]=score["rouge-2"]["p"]
+        doc["ksarkar_r2_f"]=score["rouge-2"]["f"]
+        doc["ksarkar_rlcs_r"]=score["rouge-l"]["r"]
+        doc["ksarkar_rlcs_p"]=score["rouge-l"]["p"]
+        doc["ksarkar_rlcs_f"]=score["rouge-l"]["f"]
+
+        score = rouge.get_scores(randomsummary,reference)[0]
+        doc["random_r1_r"]=score["rouge-1"]["r"]
+        doc["random_r1_p"]=score["rouge-1"]["p"]
+        doc["random_r1_f"]=score["rouge-1"]["f"]
+        doc["random_r2_r"]=score["rouge-2"]["r"]
+        doc["random_r2_p"]=score["rouge-2"]["p"]
+        doc["random_r2_f"]=score["rouge-2"]["f"]
+        doc["random_rlcs_r"]=score["rouge-l"]["r"]
+        doc["random_rlcs_p"]=score["rouge-l"]["p"]
+        doc["random_rlcs_f"]=score["rouge-l"]["f"]
+
+        results[index]=doc
+
+with open(f'output/equalization_5.json', 'w') as filehandle:
+    json.dump(results, filehandle)

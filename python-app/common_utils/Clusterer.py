@@ -13,7 +13,7 @@ def spectral_clustering(sent_vecors):
     
     affinity_matrix = exp(- pairwise_distances(vectors, squared=True) / ( sigma ** 2))
 
-    n_clusters = ceil(len(sent_vecors)/5)
+    n_clusters = ceil(len(sent_vecors)/4)
     
     model = SpectralClustering(n_clusters=n_clusters, affinity='precomputed')
     # Fit the model to the data
