@@ -1,6 +1,6 @@
-from fastapi import FastAPI 
+from fastapi import FastAPI
 from pydantic import BaseModel
-from exp_modules.expService import get_summary_unranked_sigma as summary
+from Service import get_summary as summary
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -16,14 +16,15 @@ app.add_middleware(
 
 
 class Message(BaseModel):
-    text : str
+    text: str
+
 
 @app.get("/")
 def index():
-    return {"name":"fahim morshed"}
+    return {"name": "fahim morshed"}
+
 
 @app.post("/summarize")
-def summarize(m:Message):
-    summarizedText = summary(m.text)
-    return {"text": m.text,"summary": summarizedText}
-
+def summarize(m: Message):
+    summarized_text = summary(m.text)
+    return {"text": m.text, "summary": summarized_text}
