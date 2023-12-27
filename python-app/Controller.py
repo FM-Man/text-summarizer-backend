@@ -32,7 +32,7 @@ def summarize(m:Message):
 
 @app.post("/v2/summarize")
 def summarize(m:Message):
-    summarizedText = new_summary_unranked(m.text,0.5)
+    summarizedText = new_summary_unranked(m.text,2)
     return {"text": m.text,"summary": summarizedText}
 
 
