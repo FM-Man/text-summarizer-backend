@@ -54,8 +54,7 @@ def custom_tokenizer(text, dividers):
 
 def stopword_removal(sentences):
     stop_words = open("datasets\\stopwords.txt", "r", encoding="utf8").readlines()
-    for stop_word in stop_words:
-        stop_words.append(stop_word.split('\n')[0])
+    stop_words = [stop_word.split('\n')[0] for stop_word in stop_words]
 
     preprocessed_word_list = []
     for sentence in sentences:
@@ -223,3 +222,4 @@ def get_summary(text, sigma=2):
         summary += sentences[index] + '। '
 
     return indices_in_summary, summary
+

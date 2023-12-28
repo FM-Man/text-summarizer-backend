@@ -26,5 +26,5 @@ def index():
 
 @app.post("/summarize")
 def summarize(m: Message):
-    summarized_text = summary(m.text)
+    _, summarized_text = summary(m.text)
     return {"text": m.text, "summary": summarized_text}
