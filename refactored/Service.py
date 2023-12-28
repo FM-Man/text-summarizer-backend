@@ -245,4 +245,3 @@ def get_summary(text, sigma=2, size=.25):
 
     # returns the indices and the summary. the indices are there for testing purposes only.
     return indices_in_summary, summary
-
