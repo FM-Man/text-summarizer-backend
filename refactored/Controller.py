@@ -5,10 +5,10 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-# Allow all origins, methods, and headers (you might want to restrict these in a production environment)
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Replace with your front-end URL(s) in production
+    allow_origins=["*"],
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
