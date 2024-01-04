@@ -32,12 +32,5 @@ build/
 ### VS Code ###
 .vscode/
 ### Dataset ###
-java-app/cc.bn.300.vec
-java-app/wordVectorData.obj
-python-app/pydic.dic
-python-app/datasets/pydic.dic
-python-app/datasets/cc.bn.300.vec
-python-app/output/exp_summary_allNewsData.json
-python-app/output/exp/twelve/exp_summary_allNewsData.json
-refactored/datasets/cc.bn.300.vec
-refactored/datasets/pydic.dic
+datasets/cc.bn.300.vec
+datasets/pydic.dic
