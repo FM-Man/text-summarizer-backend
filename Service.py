@@ -9,6 +9,7 @@ from sklearn.cluster import SpectralClustering
 from math import ceil, exp
 from collections import defaultdict
 import numpy
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 nltk.download('punkt')
 __all__ = ['get_summary']
@@ -162,7 +163,7 @@ def _spectral_clustering(set_of_vectors, sigma, size):
             affinity_matrix[i][j] = affinity_matrix[j][i] = _similarity(set_of_vectors[i], set_of_vectors[j], sigma)
 
     # number of clusters which is the size of the summary as the number of sentences
-    n_clusters = ceil(total_sentence * size)
+    n_clusters = max(min(3,total_sentence),ceil(total_sentence * size))
 
     # clustering
     if len(affinity_matrix) > 1:
@@ -175,7 +176,6 @@ def _spectral_clustering(set_of_vectors, sigma, size):
             cluster_indices[label].append(idx)
 
         # cluster_indices = { "1" : [0,2,4...], "2":[1,3,5...],...}
-        print(cluster_indices)
         return cluster_indices
 
     else:
@@ -224,16 +224,47 @@ sentence indices of the summary and the summary itself.
 ========================================================================="""
 
 
-def get_summary(text, sigma=2, size=.25):
-    sentences, split_sentences = _preprocessor(text)                     # step 1
-    vector_space = _read_vector()                                        # step 2
-    set_of_vectors = _vectorizer(vector_space, split_sentences)          # step 3
+def rank_using_tfidf(sentence_cluster):
+    sentences = [s for _,s in sentence_cluster]
+
+    tfidf_vectorizer = TfidfVectorizer()
+
+    # Fit the vectorizer to the Bengali sentences
+    tfidf_matrix = tfidf_vectorizer.fit_transform(sentences)
+    # Get feature names
+    feature_names = tfidf_vectorizer.get_feature_names_out()
+    # Create a dictionary to store the TF-IDF scores for each word in each sentence
+    tfidf_scores = {}
+
+    for i in range(len(sentences)):
+        feature_index = tfidf_matrix[i, :].nonzero()[1]
+        original_index,_ = sentence_cluster[i]
+        tfidf_scores[original_index] = {feature_names[index]: tfidf_matrix[i, index] for index in feature_index}
+        print(tfidf_scores[original_index])
+
+    # Sort sentences based on their average TF-IDF scores
+    sorted_sentences = sorted(tfidf_scores.items(), key=lambda x: sum(x[1].values()), reverse=True)
+
+    # Print the sorted sentences
+    # for idx, _ in sorted_sentences:
+    #     print(sentences[idx])
+    return sorted_sentences[0][0]
+
+
+def get_summary(text, sigma=2, size=.1):
+    sentences, split_sentences = _preprocessor(text)  # step 1
+    vector_space = _read_vector()  # step 2
+    set_of_vectors = _vectorizer(vector_space, split_sentences)  # step 3
     set_of_clusters = _spectral_clustering(set_of_vectors, sigma, size)  # step 4
 
     # step 5: here each of the first sentences from a cluster is picked for the summary
     indices_in_summary = []
     for cluster in set_of_clusters.items():
         picked_index = cluster[1][0]
+        # sentence_in_this_cluster = []
+        # for sentence_index in cluster[1]:
+        #     sentence_in_this_cluster.append((sentence_index, sentences[sentence_index]))
+        # picked_index = rank_using_tfidf(sentence_in_this_cluster)
         indices_in_summary.append(picked_index)
 
     # step 6: these indices are then sorted in their order of appearance in the original document.
