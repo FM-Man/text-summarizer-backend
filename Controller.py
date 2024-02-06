@@ -3,9 +3,10 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from Service import get_summary as summary
 from fastapi.middleware.cors import CORSMiddleware
+from mangum import Mangum
 
 app = FastAPI()
-
+# handler = Mangum(app)
 
 app.add_middleware(
     CORSMiddleware,
@@ -22,7 +23,7 @@ class Message(BaseModel):
 
 @app.get("/")
 def index():
-    return {"name": "fahim morshed"}
+    return {"name": "fahim morshed from mangum"}
 
 
 @app.post("/summarize")
@@ -32,4 +33,4 @@ def summarize(m: Message):
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info")
+    uvicorn.run(app, host="127.0.0.1", port=8000, log_level="info")

@@ -175,6 +175,7 @@ def _spectral_clustering(set_of_vectors, sigma, size):
             cluster_indices[label].append(idx)
 
         # cluster_indices = { "1" : [0,2,4...], "2":[1,3,5...],...}
+        print(cluster_indices)
         return cluster_indices
 
     else:
@@ -232,7 +233,7 @@ def get_summary(text, sigma=2, size=.25):
     # step 5: here each of the first sentences from a cluster is picked for the summary
     indices_in_summary = []
     for cluster in set_of_clusters.items():
-        picked_index = cluster[0]
+        picked_index = cluster[1][0]
         indices_in_summary.append(picked_index)
 
     # step 6: these indices are then sorted in their order of appearance in the original document.
