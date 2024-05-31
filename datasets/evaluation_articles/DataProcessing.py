@@ -22,4 +22,3 @@ for article in lines_to_actually_work:
         same_line_summary=same_line_summary + sentence.split("\n")[0].strip()+" "
     print(article["doc"],":",same_line_summary)
 
-# print(lines_to_actually_work)
