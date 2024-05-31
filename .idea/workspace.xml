@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="756bab8d-2422-4fcc-8051-6ef9a39550ea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/TasfeerNayeem.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/document_summaries.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/resultOfTasfeerNayeem.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayeem.py" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tasfeerNayeem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/evaluation_articles/ConvertingIntoCSV.py" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/evaluation_articles/ConvertingIntoCSV.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/evaluation_articles/document_summaries.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/evaluation_articles/document_summaries.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,17 +28,23 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2bzlqhxctlJHTYEBXJRmUFf2CLv" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.Controller.executor": "Run",
+    "Python.ConvertingIntoCSV.executor": "Run",
+    "Python.tasfeerNayeem.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/java workspace/Github/text-summarizer-backend",
+    "last_opened_file_path": "E:/java workspace/Github/text-summarizer-backend/comparing_codes/tasfeerNayyem",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -38,9 +53,19 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\java workspace\Github\text-summarizer-backend\comparing_codes\tasfeerNayyem" />
+      <recent name="E:\java workspace\Github\text-summarizer-backend\comparing_codes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\java workspace\Github\text-summarizer-backend\comparing_codes\tasfeerNayyem" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Controller" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="text-summarizer-backend" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -51,6 +76,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Controller.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -60,12 +86,41 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tasfeerNayeem" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="text-summarizer-backend" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/comparing_codes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="E:\java workspace\Github\text-summarizer-backend\comparing_codes\tasfeerNayyem\tasfeerNayeem.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.tasfeerNayeem" />
+        <item itemvalue="Python.Controller" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17011.127" />
+        <option value="bundled-python-sdk-48aec45f0201-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17011.127" />
       </set>
     </attachedChunks>
   </component>
@@ -78,10 +133,17 @@
       <option name="presentableId" value="Default" />
       <updated>1707225980730</updated>
       <workItem from="1717128775155" duration="1962000" />
+      <workItem from="1717175774978" duration="7213000" />
+      <workItem from="1717192727524" duration="6016000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/alltexts_txt$Controller.coverage" NAME="Controller Coverage Results" MODIFIED="1717181084144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/alltexts_txt$tasfeerNayeem.coverage" NAME="tasfeerNayeem Coverage Results" MODIFIED="1717196208445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/comparing_codes" />
+    <SUITE FILE_PATH="coverage/alltexts_txt$ConvertingIntoCSV.coverage" NAME="ConvertingIntoCSV Coverage Results" MODIFIED="1717194223021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datasets/evaluation_articles" />
   </component>
 </project>

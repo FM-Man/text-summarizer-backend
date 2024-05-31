@@ -1,19 +1,15 @@
-summaryFile = open("results/alltexts.txt", "r", encoding="utf-8")
+import json
+summaryFile = open("document_summaries.csv", "r", encoding="utf-8")
 summaryLines = summaryFile.readlines()
 summaries = []
-for i in range(250):
-    line = []
-    summaries.append(line)
 
 for line in summaryLines:
-    line_divided = line.strip().split(" : ")
-    document_lines = open("articles/doc_"+line_divided[0].strip()+".txt", "r", encoding="utf-8").readlines()
-    document=""
-    for document_line in document_lines:
-        document = document + document_line.split("\n")[0].strip()
+    line_divided = line.strip().split("</s>")
+    line_filtered = []
+    for element in line_divided:
+        if element != "" and element != ',':
+            line_filtered.append(element)
+    print(len(line_filtered))
+    summaries.append({"document": line_filtered[0], "summary-1": line_filtered[1], "summary-2": line_filtered[2]})
 
-    summaries[int(line_divided[0].strip())-1].append(document)
-    summaries[int(line_divided[0].strip())-1].append(line_divided[1].strip())
-
-for line in summaries:
-    print('"', line[0], '", "', line[1], '", "', line[3], '"')
+json.dump(summaries, open("document_summaries.json", "w", encoding="utf-8"), ensure_ascii=False, indent=4)

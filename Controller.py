@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from Service import get_summary as summary
 from fastapi.middleware.cors import CORSMiddleware
-from mangum import Mangum
+
 
 app = FastAPI()
 # handler = Mangum(app)
