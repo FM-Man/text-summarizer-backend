@@ -5,21 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="756bab8d-2422-4fcc-8051-6ef9a39550ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/TasfeerNayeem.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/document_summaries.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/resultOfTasfeerNayeem.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Driver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/document_summaries.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult0.01.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult0.025.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult0.05.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult0.075.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult0.1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult0.2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult0.3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult0.4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult0.5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resultcomp.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayeem.py" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tasfeerNayeem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/evaluation_articles/ConvertingIntoCSV.py" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/evaluation_articles/ConvertingIntoCSV.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/evaluation_articles/document_summaries.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/evaluation_articles/document_summaries.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -37,14 +48,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Python.Controller.executor": "Run",
     "Python.ConvertingIntoCSV.executor": "Run",
+    "Python.Driver.executor": "Run",
     "Python.tasfeerNayeem.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/java workspace/Github/text-summarizer-backend/comparing_codes/tasfeerNayyem",
+    "last_opened_file_path": "E:/java workspace/Github/text-summarizer-backend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -55,6 +68,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\java workspace\Github\text-summarizer-backend" />
       <recent name="E:\java workspace\Github\text-summarizer-backend\comparing_codes\tasfeerNayyem" />
       <recent name="E:\java workspace\Github\text-summarizer-backend\comparing_codes" />
     </key>
@@ -62,7 +76,7 @@
       <recent name="E:\java workspace\Github\text-summarizer-backend\comparing_codes\tasfeerNayyem" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.Controller">
     <configuration name="Controller" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="text-summarizer-backend" />
       <option name="ENV_FILES" value="" />
@@ -111,8 +125,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.tasfeerNayeem" />
         <item itemvalue="Python.Controller" />
+        <item itemvalue="Python.tasfeerNayeem" />
       </list>
     </recent_temporary>
   </component>
@@ -135,14 +149,19 @@
       <workItem from="1717128775155" duration="1962000" />
       <workItem from="1717175774978" duration="7213000" />
       <workItem from="1717192727524" duration="6016000" />
+      <workItem from="1718044871618" duration="8254000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/alltexts_txt$Controller.coverage" NAME="Controller Coverage Results" MODIFIED="1717181084144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/alltexts_txt$Driver.coverage" NAME="Driver Coverage Results" MODIFIED="1718050931920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/alltexts_txt$Controller.coverage" NAME="Controller Coverage Results" MODIFIED="1718045741842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/alltexts_txt$tasfeerNayeem.coverage" NAME="tasfeerNayeem Coverage Results" MODIFIED="1717196208445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/comparing_codes" />
     <SUITE FILE_PATH="coverage/alltexts_txt$ConvertingIntoCSV.coverage" NAME="ConvertingIntoCSV Coverage Results" MODIFIED="1717194223021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datasets/evaluation_articles" />
   </component>
