@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="756bab8d-2422-4fcc-8051-6ef9a39550ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Driver.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/document_summaries.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fahimResult.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fahimResult0.01.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fahimResult0.025.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fahimResult0.05.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fahimResult0.075.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fahimResult0.1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fahimResult0.2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fahimResult0.3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fahimResult0.4.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fahimResult0.5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resultcomp.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/Driver.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +136,7 @@
       <workItem from="1717128775155" duration="1962000" />
       <workItem from="1717175774978" duration="7213000" />
       <workItem from="1717192727524" duration="6016000" />
-      <workItem from="1718044871618" duration="8254000" />
+      <workItem from="1718044871618" duration="8677000" />
     </task>
     <servers />
   </component>

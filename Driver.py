@@ -5,7 +5,7 @@ from Service import get_summary
 
 documents_summaries = json.load(open("document_summaries.json", "r", encoding="utf-8"))
 rouge = Rouge()
-sigmas=[0.075,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0]
+sigmas=[9.0,10.0]
 resultComp=open("resultcomp.txt","a+",encoding="utf-8")
 
 for sig in sigmas:
