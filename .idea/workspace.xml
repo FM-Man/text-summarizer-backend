@@ -5,7 +5,81 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="756bab8d-2422-4fcc-8051-6ef9a39550ea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ServiceNew.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimOldResults/FirstRank.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimOldResults/fahimResult0.01.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimOldResults/fahimResult0.025.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimOldResults/fahimResult0.05.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimOldResults/fahimResult0.075.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimOldResults/fahimResult0.1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimOldResults/fahimResult0.2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimOldResults/fahimResult0.3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimOldResults/fahimResult0.4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimOldResults/fahimResult0.5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimOldResults/fahimResult0.6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimOldResults/fahimResult0.7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimOldResults/fahimResult0.8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimOldResults/fahimResult0.9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimOldResults/firstpickfinetune.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult0.0001.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult0.00025.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult0.0005.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult0.00075.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult0.001.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult0.0025.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult0.005.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult0.0075.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult10.0.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult1e-05.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult1e-06.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult1e-07.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult1e-08.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult1e-09.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult1e-10.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult2.5e-07.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult2.5e-08.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult2.5e-09.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult5e-07.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult5e-08.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult5e-09.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult7.5e-07.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult7.5e-08.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult7.5e-09.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fahimResult9.0.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resultcomp.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/Driver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fahimResult.json" beforeDir="false" afterPath="$PROJECT_DIR$/fahimOldResults/fahimResult.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fahimResult0.01.json" beforeDir="false" afterPath="$PROJECT_DIR$/fahimResult0.01.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fahimResult0.025.json" beforeDir="false" afterPath="$PROJECT_DIR$/fahimResult0.025.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fahimResult0.05.json" beforeDir="false" afterPath="$PROJECT_DIR$/fahimResult0.05.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fahimResult0.075.json" beforeDir="false" afterPath="$PROJECT_DIR$/fahimResult0.075.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fahimResult0.1.json" beforeDir="false" afterPath="$PROJECT_DIR$/fahimResult0.1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fahimResult0.2.json" beforeDir="false" afterPath="$PROJECT_DIR$/fahimResult0.2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fahimResult0.3.json" beforeDir="false" afterPath="$PROJECT_DIR$/fahimResult0.3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fahimResult0.4.json" beforeDir="false" afterPath="$PROJECT_DIR$/fahimResult0.4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fahimResult0.5.json" beforeDir="false" afterPath="$PROJECT_DIR$/fahimResult0.5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fahimResult0.6.json" beforeDir="false" afterPath="$PROJECT_DIR$/fahimResult0.6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fahimResult0.7.json" beforeDir="false" afterPath="$PROJECT_DIR$/fahimResult0.7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fahimResult0.8.json" beforeDir="false" afterPath="$PROJECT_DIR$/fahimResult0.8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fahimResult0.9.json" beforeDir="false" afterPath="$PROJECT_DIR$/fahimResult0.9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fahimResult1.0.json" beforeDir="false" afterPath="$PROJECT_DIR$/fahimOldResults/fahimResult1.0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fahimResult2.0.json" beforeDir="false" afterPath="$PROJECT_DIR$/fahimOldResults/fahimResult2.0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fahimResult3.0.json" beforeDir="false" afterPath="$PROJECT_DIR$/fahimOldResults/fahimResult3.0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fahimResult4.0.json" beforeDir="false" afterPath="$PROJECT_DIR$/fahimOldResults/fahimResult4.0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fahimResult5.0.json" beforeDir="false" afterPath="$PROJECT_DIR$/fahimOldResults/fahimResult5.0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fahimResult6.0.json" beforeDir="false" afterPath="$PROJECT_DIR$/fahimOldResults/fahimResult6.0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fahimResult7.0.json" beforeDir="false" afterPath="$PROJECT_DIR$/fahimOldResults/fahimResult7.0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fahimResult8.0.json" beforeDir="false" afterPath="$PROJECT_DIR$/fahimOldResults/fahimResult8.0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resultcomp.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,26 +107,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.Controller.executor": "Run",
-    "Python.ConvertingIntoCSV.executor": "Run",
-    "Python.Driver.executor": "Run",
-    "Python.tasfeerNayeem.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/java workspace/Github/text-summarizer-backend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.Controller.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ConvertingIntoCSV.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Driver.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ServiceNew.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tasfeerNayeem.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/java workspace/Github/text-summarizer-backend/Driver.py&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\java workspace\Github\text-summarizer-backend" />
@@ -60,10 +135,11 @@
       <recent name="E:\java workspace\Github\text-summarizer-backend\comparing_codes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\java workspace\Github\text-summarizer-backend\fahimOldResults" />
       <recent name="E:\java workspace\Github\text-summarizer-backend\comparing_codes\tasfeerNayyem" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Controller">
+  <component name="RunManager" selected="Python.Driver">
     <configuration name="Controller" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="text-summarizer-backend" />
       <option name="ENV_FILES" value="" />
@@ -79,6 +155,30 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Controller.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Driver" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="text-summarizer-backend" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.11" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Driver.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -110,12 +210,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.Controller" />
-        <item itemvalue="Python.tasfeerNayeem" />
-      </list>
-    </recent_temporary>
+    <list>
+      <item itemvalue="Python.Driver" />
+      <item itemvalue="Python.Controller" />
+      <item itemvalue="Python.tasfeerNayeem" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -137,6 +236,9 @@
       <workItem from="1717175774978" duration="7213000" />
       <workItem from="1717192727524" duration="6016000" />
       <workItem from="1718044871618" duration="8677000" />
+      <workItem from="1718432230632" duration="148000" />
+      <workItem from="1718433635163" duration="21903000" />
+      <workItem from="1718469150170" duration="4647000" />
     </task>
     <servers />
   </component>
@@ -147,9 +249,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/alltexts_txt$Driver.coverage" NAME="Driver Coverage Results" MODIFIED="1718050931920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/alltexts_txt$Driver.coverage" NAME="Driver Coverage Results" MODIFIED="1718469387655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/alltexts_txt$Controller.coverage" NAME="Controller Coverage Results" MODIFIED="1718045741842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/alltexts_txt$tasfeerNayeem.coverage" NAME="tasfeerNayeem Coverage Results" MODIFIED="1717196208445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/comparing_codes" />
+    <SUITE FILE_PATH="coverage/alltexts_txt$ServiceNew.coverage" NAME="ServiceNew Coverage Results" MODIFIED="1718434271705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/alltexts_txt$ConvertingIntoCSV.coverage" NAME="ConvertingIntoCSV Coverage Results" MODIFIED="1717194223021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datasets/evaluation_articles" />
   </component>
 </project>
