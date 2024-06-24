@@ -10,6 +10,9 @@ from math import ceil, exp
 from collections import defaultdict
 import numpy
 from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.cluster import AgglomerativeClustering
+from sklearn.metrics import silhouette_score
+from sklearn.manifold import MDS
 
 nltk.download('punkt')
 __all__ = ['get_summary']
@@ -159,11 +162,32 @@ def _spectral_clustering(set_of_vectors, sigma, size):
 
     # calculating similarity for affinity matrix
     for i in range(0, total_sentence):
-        for j in range(i + 1, total_sentence):
+        for j in range(i+1, total_sentence):
             affinity_matrix[i][j] = affinity_matrix[j][i] = _similarity(set_of_vectors[i], set_of_vectors[j], sigma)
 
     # number of clusters which is the size of the summary as the number of sentences
-    n_clusters = max(min(3, total_sentence), ceil(total_sentence * size))
+    n_clusters = max(min(2, total_sentence), ceil(total_sentence * size))
+    """---------------------------------------------------------------------------------------"""
+    # key = 0
+    # k = []
+    # my_dict = dict()
+    # silhouette_scores = []
+    # for n in range(2, total_sentence):
+    #     # model = SpectralClustering(n_clusters=n, affinity='precomputed')
+    #     # model.fit(affinity_matrix)
+    #     cluster1 = AgglomerativeClustering(n_clusters=n, metric='euclidean', linkage='ward')
+    #     y1 = cluster1.fit_predict(affinity_matrix)
+    #     # Calculate Silhouette Scores
+    #     silhouette_scores.append(silhouette_score(affinity_matrix, y1))
+    #     k.append(n)
+    #     my_dict[key] = n
+    #     key = key + 1
+    # # Find the maximum Silhouette Score
+    # maxx = silhouette_scores.index(max(silhouette_scores))
+    #
+    # val = list(my_dict.values())
+    # n_clusters = val[maxx]
+    """--------------------------------------------------------------------------------------"""
 
     # clustering
     if len(affinity_matrix) > 1:
@@ -205,10 +229,17 @@ def _similarity(sentence_x, sentence_y, sigma):
     if len(most_similar_distances) == 0:
         return 0
 
-    avg_msd = sum(most_similar_distances) / len(most_similar_distances)
+    most_similar_distances = sorted(most_similar_distances)
+    # avg_msd = sum(most_similar_distances) / len(most_similar_distances)
+    # length = ceil(len(most_similar_distances) * 1)
+    length = ceil(len(most_similar_distances)*.75)
+    squared_average = 0
+    for i in range(length):
+        squared_average += (most_similar_distances[i] ** 2)
+    squared_average /= length
 
     # gaussian similarity
-    return exp(- avg_msd ** 2 / (2 * sigma ** 2))
+    return exp(- squared_average / (2 * sigma ** 2))
 
 
 def _euclidean_distance(vect1, vect2):
