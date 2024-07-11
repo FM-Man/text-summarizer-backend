@@ -1,27 +1,31 @@
 from rouge import Rouge
 import json
-from ServiceNew import get_summary
+from Service_la_e_msd2_2s2__ import get_summary
 
 documents_summaries = json.load(open("document_summaries.json", "r", encoding="utf-8"))
 rouge = Rouge()
-sigmas = [0.000000000001,0.0000000000025,0.000000000005,0.0000000000075,
-          0.00000000001,0.000000000025,0.00000000005,0.000000000075,
-          0.0000000001,0.00000000025,0.0000000005,0.00000000075,
-          0.000000001,0.0000000025,0.000000005,0.0000000075,
-          0.00000001,0.000000025,0.00000005,0.000000075,
-          0.0000001,0.00000025,0.0000005,0.00000075,
-          0.000001,0.0000025,0.000005,0.0000075,
-          0.00001,0.000025,0.00005,0.000075,
-          0.0001,0.00025,0.0005,0.00075,
-          0.001,0.0025,0.005,0.0075,
-          0.01,0.025,0.05,0.075,
-          0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,
-          1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0]
+sigmas = [
+            0.000000000001,0.0000000000025,0.000000000005,0.0000000000075,
+            0.00000000001,0.000000000025,0.00000000005,0.000000000075,
+            0.0000000001,0.00000000025,0.0000000005,0.00000000075,
+            0.000000001,0.0000000025,0.000000005,0.0000000075,
+            0.00000001,0.000000025,0.00000005,0.000000075,
+            0.0000001,0.00000025,0.0000005,
+            0.00000075,
+            0.000001,0.0000025,0.000005,0.0000075,
+            0.00001,0.000025,0.00005,0.000075,
+            0.0001,0.00025,0.0005,0.00075,
+            0.001,0.0025,0.005,0.0075,
+            0.01,0.025,0.05,0.075,
+            0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,
+            1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0
+        ]
+# sigmas = [1]
 
-resultComp = open("fahimAverageWordSimilarityResult/resultcomp.csv", "w+", encoding="utf-8")
-resultComp.write("Sigma,rouge-1-r,rouge-1-p,rouge-1-f,rouge-2-r,rouge-2-p,rouge-2-f,rouge-l-r,rouge-l-p,rouge-l-f,tn-r1-f,tn-r2-f,tn-rl-f")
+resultComp = open("fahim_la(e(msd2_2s2))/a_insteadof_la/resultcomp.csv", "w+", encoding="utf-8")
+resultComp.write("Sigma,rouge-1-r,rouge-1-p,rouge-1-f,rouge-2-r,rouge-2-p,rouge-2-f,rouge-l-r,rouge-l-p,rouge-l-f\n")
 resultComp.close()
-resultComp = open("fahimAverageWordSimilarityResult/resultcomp.csv", "a+", encoding="utf-8")
+
 
 for sig in sigmas:
     fahim = []
@@ -97,9 +101,11 @@ for sig in sigmas:
     fahim.append(
         [sum_r1_r / 500, sum_r1_p / 500, sum_r1_f / 500, sum_r2_r / 500, sum_r2_p / 500, sum_r2_f / 500, sum_rl_r / 500,
          sum_rl_p / 500, sum_rl_f / 500])
+    resultComp = open("fahim_la(e(msd2_2s2))/a_insteadof_la/resultcomp.csv", "a+", encoding="utf-8")
     resultComp.write(str(sig) + "," + str(sum_r1_r / 500) + "," + str(sum_r1_p / 500) + "," + str(
         sum_r1_f / 500) + "," + str(sum_r2_r / 500) + "," + str(sum_r2_p / 500) + "," + str(
-        sum_r2_f / 500) + "," + str(sum_rl_r / 500) + "," + str(sum_rl_p / 500) + "," + str(sum_rl_f / 500)+",0.490588947,0.381699937,0.445846941\n")
-    json.dump(fahim, open("fahimAverageWordSimilarityResult/fahimResult" + str(sig) + ".json", "w", encoding="utf-8"), ensure_ascii=False, indent=4)
+        sum_r2_f / 500) + "," + str(sum_rl_r / 500) + "," + str(sum_rl_p / 500) + "," + str(sum_rl_f / 500)+"\n")
+    resultComp.close()
+    json.dump(fahim, open("fahim_la(e(msd2_2s2))/a_insteadof_la/fahimResult" + str(sig) + ".json", "w", encoding="utf-8"), ensure_ascii=False, indent=4)
 
-resultComp.close()
+

@@ -35,3 +35,7 @@ build/
 datasets/cc.bn.300.vec
 datasets/pydic.dic
 cc.bn.300.vec
+/__pycache__
+/__pycache__
+/__pycache__
+__pycache__/Service.cpython-311.pyc
