@@ -1,0 +1,3 @@
+Bangla Summarization Dataset(Prothom Alo)
+TOWHID AHMED FOYSAL
+https://www.kaggle.com/datasets/towhidahmedfoysal/bangla-summarization-datasetprothom-alo

@@ -172,7 +172,7 @@ def _spectral_clustering(set_of_vectors, sigma, size):
             affinity_matrix[i][j] = affinity_matrix[j][i] = _similarity(set_of_vectors[i], set_of_vectors[j], sigma)
 
     # number of clusters which is the size of the summary as the number of sentences
-    n_clusters = max(min(3,total_sentence),ceil(total_sentence * size))
+    n_clusters = ceil(total_sentence * size)
 
     # clustering
     if len(affinity_matrix) > 1:
