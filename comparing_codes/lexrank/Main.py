@@ -23,7 +23,7 @@ def _custom_tokenizer(text, dividers):
 
     return processed_tokens
 
-def dataset_testing(document, summary_1, summary_2, summary_3, serial_no,result_compilation,rouge,lxr):
+def dataset_testing(document, summary_1, summary_2, serial_no,result_compilation,rouge,lxr):
     print("#######", serial_no, "#############")
     row = {}
 
@@ -69,32 +69,32 @@ def dataset_testing(document, summary_1, summary_2, summary_3, serial_no,result_
     print(rouge_score["rouge-1"]["f"], " ", rouge_score["rouge-2"]["f"], " ", rouge_score["rouge-l"]["f"])
     result_compilation.append(row)
 
-    row = {}
-    row["document"] = document
-    row["summary"] = summary_3
-    summary_array = lxr.get_summary(sentences, threshold=None)
-    machine_summary = "। ".join(summary_array)
-    row["machine-summary"] = machine_summary
+    # row = {}
+    # row["document"] = document
+    # row["summary"] = summary_3
+    # summary_array = lxr.get_summary(sentences, threshold=None)
+    # machine_summary = "। ".join(summary_array)
+    # row["machine-summary"] = machine_summary
 
-    rouge_score = rouge.get_scores(machine_summary, summary_3)[0]
-    row["rouge-1-r"] = rouge_score['rouge-1']['r']
-    row["rouge-1-p"] = rouge_score['rouge-1']['p']
-    row["rouge-1-f"] = rouge_score['rouge-1']['f']
-    row["rouge-2-r"] = rouge_score['rouge-2']['r']
-    row["rouge-2-p"] = rouge_score['rouge-2']['p']
-    row["rouge-2-f"] = rouge_score['rouge-2']['f']
-    row["rouge-l-r"] = rouge_score['rouge-l']['r']
-    row["rouge-l-p"] = rouge_score['rouge-l']['p']
-    row["rouge-l-f"] = rouge_score['rouge-l']['f']
-    print(rouge_score["rouge-1"]["f"], " ", rouge_score["rouge-2"]["f"], " ", rouge_score["rouge-l"]["f"])
-    result_compilation.append(row)
+    # rouge_score = rouge.get_scores(machine_summary, summary_3)[0]
+    # row["rouge-1-r"] = rouge_score['rouge-1']['r']
+    # row["rouge-1-p"] = rouge_score['rouge-1']['p']
+    # row["rouge-1-f"] = rouge_score['rouge-1']['f']
+    # row["rouge-2-r"] = rouge_score['rouge-2']['r']
+    # row["rouge-2-p"] = rouge_score['rouge-2']['p']
+    # row["rouge-2-f"] = rouge_score['rouge-2']['f']
+    # row["rouge-l-r"] = rouge_score['rouge-l']['r']
+    # row["rouge-l-p"] = rouge_score['rouge-l']['p']
+    # row["rouge-l-f"] = rouge_score['rouge-l']['f']
+    # print(rouge_score["rouge-1"]["f"], " ", rouge_score["rouge-2"]["f"], " ", rouge_score["rouge-l"]["f"])
+    # result_compilation.append(row)
 
 
 
 
 rouge = Rouge()
 
-documents_summaries_1 = pd.read_csv("../evaluation_dataset_3/BNLPC_CSV_Dataset.csv", encoding='utf-8', delimiter=',')
+documents_summaries_1 = pd.read_csv("../evaluation_dataset_4/Evaluation_Dataset_4.csv", encoding='utf-8', delimiter=',')
 # documents_summaries_2 = pd.read_csv("../evaluation_dataset_2/BusinessNewsData.csv", encoding='utf-8', delimiter=',')
 # documents_summaries_3 = pd.read_csv("../evaluation_dataset_2/EntertainmentNewsData.csv", encoding='utf-8',
 #                                     delimiter=',')
@@ -117,8 +117,8 @@ result_file = []
 serial_no=1
 for row_index, row in documents_summaries_1.iterrows():
     try:
-        dataset_testing(row["Document"], row["summary_1"], row["summary_2"], row["summary_3"], serial_no,result_file,rouge, lxr)
-        serial_no += 3
+        dataset_testing(row["Document"], row["summary_1"], row["summary_2"], serial_no,result_file,rouge, lxr)
+        serial_no += 2
     except Exception as e:
         pass
 # for row_index, row in documents_summaries_2.iterrows():
@@ -185,5 +185,5 @@ result_file.append(
     [sum_r1_r / length, sum_r1_p / length, sum_r1_f / length, sum_r2_r / length, sum_r2_p / length, sum_r2_f / length, sum_rl_r / length,
      sum_rl_p / length, sum_rl_f / length])
 
-json.dump(result_file, open("lexRankResult_dataset_3.json", "w", encoding="utf-8"), ensure_ascii=False, indent=4)
+json.dump(result_file, open("lexRankResult_dataset_4.json", "w", encoding="utf-8"), ensure_ascii=False, indent=4)
 

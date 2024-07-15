@@ -4,7 +4,7 @@ from Service_firstrank_e_a_m2__2s2_ import get_summary
 import pandas as pd
 
 
-def dataset_testing(document, summary_1, summary_2, summary_3, sigma, serial_no, rouge, result_file):
+def dataset_testing(document, summary_1, summary_2, sigma, serial_no, rouge, result_file):
     print("#######", sigma, "->", serial_no, "#############")
     row = {}
 
@@ -46,24 +46,24 @@ def dataset_testing(document, summary_1, summary_2, summary_3, sigma, serial_no,
     print(rouge_score["rouge-1"]["f"], " ", rouge_score["rouge-2"]["f"], " ", rouge_score["rouge-l"]["f"])
     result_file.append(row)
 
-    row = {}
-    row["document"] = document
-    row["summary"] = summary_3
-    _, machine_summary = get_summary(document, size=.20, sigma=sig)
-    row["machine-summary"] = machine_summary
+    # row = {}
+    # row["document"] = document
+    # row["summary"] = summary_3
+    # _, machine_summary = get_summary(document, size=.20, sigma=sig)
+    # row["machine-summary"] = machine_summary
 
-    rouge_score = rouge.get_scores(machine_summary, summary_3)[0]
-    row["rouge-1-r"] = rouge_score['rouge-1']['r']
-    row["rouge-1-p"] = rouge_score['rouge-1']['p']
-    row["rouge-1-f"] = rouge_score['rouge-1']['f']
-    row["rouge-2-r"] = rouge_score['rouge-2']['r']
-    row["rouge-2-p"] = rouge_score['rouge-2']['p']
-    row["rouge-2-f"] = rouge_score['rouge-2']['f']
-    row["rouge-l-r"] = rouge_score['rouge-l']['r']
-    row["rouge-l-p"] = rouge_score['rouge-l']['p']
-    row["rouge-l-f"] = rouge_score['rouge-l']['f']
-    print(rouge_score["rouge-1"]["f"], " ", rouge_score["rouge-2"]["f"], " ", rouge_score["rouge-l"]["f"])
-    result_file.append(row)
+    # rouge_score = rouge.get_scores(machine_summary, summary_3)[0]
+    # row["rouge-1-r"] = rouge_score['rouge-1']['r']
+    # row["rouge-1-p"] = rouge_score['rouge-1']['p']
+    # row["rouge-1-f"] = rouge_score['rouge-1']['f']
+    # row["rouge-2-r"] = rouge_score['rouge-2']['r']
+    # row["rouge-2-p"] = rouge_score['rouge-2']['p']
+    # row["rouge-2-f"] = rouge_score['rouge-2']['f']
+    # row["rouge-l-r"] = rouge_score['rouge-l']['r']
+    # row["rouge-l-p"] = rouge_score['rouge-l']['p']
+    # row["rouge-l-f"] = rouge_score['rouge-l']['f']
+    # print(rouge_score["rouge-1"]["f"], " ", rouge_score["rouge-2"]["f"], " ", rouge_score["rouge-l"]["f"])
+    # result_file.append(row)
 
 
 sigmas = [
@@ -80,10 +80,12 @@ sigmas = [
 
 # document_summaries = json.load(open("dataset_1_document_summaries.json",encoding="utf-8"))
 
-document_summaries = pd.read_csv("comparing_codes/evaluation_dataset_3/BNLPC_CSV_Dataset.csv",encoding="utf-8",delimiter=",")
+# document_summaries = pd.read_csv("comparing_codes/evaluation_dataset_3/BNLPC_CSV_Dataset.csv",encoding="utf-8",delimiter=",")
+
+document_summaries = pd.read_csv("comparing_codes/evaluation_dataset_4/Evaluation_Dataset_4.csv",encoding="utf-8",delimiter=",")
 rouge = Rouge()
 
-resultComp = open("fahim_firstrank_e(a(m2)_2s2)/ex1_ds3/resultcomp.csv", "w+", encoding="utf-8")
+resultComp = open("fahim_firstrank_e(a(m2)_2s2)/ex1_ds4/resultcomp.csv", "w+", encoding="utf-8")
 resultComp.write("Sigma,rouge-1-r,rouge-1-p,rouge-1-f,rouge-2-r,rouge-2-p,rouge-2-f,rouge-l-r,rouge-l-p,rouge-l-f\n")
 resultComp.close()
 result_compilation = []
@@ -134,7 +136,7 @@ for sig in sigmas:
     #         pass
     for row_index,row in document_summaries.iterrows():
         try: 
-            dataset_testing(row["Document"],row["summary_1"],row["summary_2"],row["summary_3"],sig,serial_no,rouge,result_compilation)
+            dataset_testing(row["Document"],row["summary_1"],row["summary_2"],sig,serial_no,rouge,result_compilation)
             serial_no+=3
         except: pass
 
@@ -165,12 +167,12 @@ for sig in sigmas:
         [sum_r1_r / length, sum_r1_p / length, sum_r1_f / length, sum_r2_r / length, sum_r2_p / length,
          sum_r2_f / length, sum_rl_r / length,
          sum_rl_p / length, sum_rl_f / length])
-    resultComp = open("fahim_firstrank_e(a(m2)_2s2)/ex1_ds3/resultcomp.csv", "a+", encoding="utf-8")
+    resultComp = open("fahim_firstrank_e(a(m2)_2s2)/ex1_ds4/resultcomp.csv", "a+", encoding="utf-8")
     resultComp.write(str(sig) + "," + str(sum_r1_r / length) + "," + str(sum_r1_p / length) + "," + str(
         sum_r1_f / length) + "," + str(sum_r2_r / length) + "," + str(sum_r2_p / length) + "," + str(
         sum_r2_f / length) + "," + str(sum_rl_r / length) + "," + str(sum_rl_p / length) + "," + str(
         sum_rl_f / length) + "\n")
     resultComp.close()
     json.dump(result_compilation,
-              open("fahim_firstrank_e(a(m2)_2s2)/ex1_ds3/fahim_dataset_3_" + str(sig) + ".json", "w",
+              open("fahim_firstrank_e(a(m2)_2s2)/ex1_ds4/fahim_dataset_4_" + str(sig) + ".json", "w",
                    encoding="utf-8"), ensure_ascii=False, indent=4)

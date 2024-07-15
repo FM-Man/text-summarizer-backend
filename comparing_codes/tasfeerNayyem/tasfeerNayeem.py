@@ -205,7 +205,7 @@ def get_summary(filename, n, doc):
 
 
 
-def dataset_testing(document, summary_1, summary_2, summary_3, serial_no,result_compilation,rouge):
+def dataset_testing(document, summary_1, summary_2, serial_no,result_compilation,rouge):
     print("#######", serial_no, "#############")
     row = {}
 
@@ -251,26 +251,26 @@ def dataset_testing(document, summary_1, summary_2, summary_3, serial_no,result_
     print(rouge_score["rouge-1"]["f"], " ", rouge_score["rouge-2"]["f"], " ", rouge_score["rouge-l"]["f"])
     result_compilation.append(row)
 
-    row = {}
-    row["document"] = document
-    row["summary"] = summary_3
-    doc = sent_tokenize(document)
-    file_name, n = start_f(doc)
-    machine_summary = get_summary(file_name, n, doc)
-    row["machine-summary"] = machine_summary
+    # row = {}
+    # row["document"] = document
+    # row["summary"] = summary_3
+    # doc = sent_tokenize(document)
+    # file_name, n = start_f(doc)
+    # machine_summary = get_summary(file_name, n, doc)
+    # row["machine-summary"] = machine_summary
 
-    rouge_score = rouge.get_scores(machine_summary, summary_3)[0]
-    row["rouge-1-r"] = rouge_score['rouge-1']['r']
-    row["rouge-1-p"] = rouge_score['rouge-1']['p']
-    row["rouge-1-f"] = rouge_score['rouge-1']['f']
-    row["rouge-2-r"] = rouge_score['rouge-2']['r']
-    row["rouge-2-p"] = rouge_score['rouge-2']['p']
-    row["rouge-2-f"] = rouge_score['rouge-2']['f']
-    row["rouge-l-r"] = rouge_score['rouge-l']['r']
-    row["rouge-l-p"] = rouge_score['rouge-l']['p']
-    row["rouge-l-f"] = rouge_score['rouge-l']['f']
-    print(rouge_score["rouge-1"]["f"], " ", rouge_score["rouge-2"]["f"], " ", rouge_score["rouge-l"]["f"])
-    result_compilation.append(row)
+    # rouge_score = rouge.get_scores(machine_summary, summary_3)[0]
+    # row["rouge-1-r"] = rouge_score['rouge-1']['r']
+    # row["rouge-1-p"] = rouge_score['rouge-1']['p']
+    # row["rouge-1-f"] = rouge_score['rouge-1']['f']
+    # row["rouge-2-r"] = rouge_score['rouge-2']['r']
+    # row["rouge-2-p"] = rouge_score['rouge-2']['p']
+    # row["rouge-2-f"] = rouge_score['rouge-2']['f']
+    # row["rouge-l-r"] = rouge_score['rouge-l']['r']
+    # row["rouge-l-p"] = rouge_score['rouge-l']['p']
+    # row["rouge-l-f"] = rouge_score['rouge-l']['f']
+    # print(rouge_score["rouge-1"]["f"], " ", rouge_score["rouge-2"]["f"], " ", rouge_score["rouge-l"]["f"])
+    # result_compilation.append(row)
 
 
 import pandas as pd
@@ -289,11 +289,11 @@ import numpy
 
 # doument_summaries = json.load(open("document_summaries.json",encoding="utf-8"))
 
-documents_summaries = pd.read_csv("../evaluation_dataset_3/BNLPC_CSV_Dataset.csv", encoding='utf-8', delimiter=',')
+documents_summaries = pd.read_csv("../evaluation_dataset_4/Evaluation_Dataset_4.csv", encoding='utf-8', delimiter=',')
 
 rouge = Rouge()
 
-resultComp = open("ds_3_resultcomp.csv", "w+", encoding="utf-8")
+resultComp = open("ds_4_resultcomp.csv", "w+", encoding="utf-8")
 resultComp.write("Sigma,rouge-1-r,rouge-1-p,rouge-1-f,rouge-2-r,rouge-2-p,rouge-2-f,rouge-l-r,rouge-l-p,rouge-l-f\n")
 resultComp.close()
 result_file = []
@@ -302,8 +302,8 @@ serial_no = 1
 # for row in doument_summaries:
 for row_index, row in documents_summaries.iterrows():
     try:
-        dataset_testing(row["Document"], row["summary_1"], row["summary_2"], row["summary_3"], serial_no,result_file,rouge)
-        serial_no += 3
+        dataset_testing(row["Document"], row["summary_1"], row["summary_2"], serial_no,result_file,rouge)
+        serial_no += 2
     except Exception as e:
         pass
 # for row_index, row in documents_summaries_2.iterrows():
@@ -370,4 +370,4 @@ result_file.append(
     [sum_r1_r / length, sum_r1_p / length, sum_r1_f / length, sum_r2_r / length, sum_r2_p / length, sum_r2_f / length, sum_rl_r / length,
      sum_rl_p / length, sum_rl_f / length])
 
-json.dump(result_file, open("tasfeerResult_dataset_3.json", "w", encoding="utf-8"), ensure_ascii=False, indent=4)
+json.dump(result_file, open("tasfeerResult_dataset_4.json", "w", encoding="utf-8"), ensure_ascii=False, indent=4)
