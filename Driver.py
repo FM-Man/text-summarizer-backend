@@ -4,8 +4,8 @@ from Service_firstrank_e_a_m2__2s2_ import get_summary
 import pandas as pd
 
 
-def dataset_testing(document, summary_1, summary_2, sigma, serial_no, rouge, result_file):
-    print("#######", sigma, "->", serial_no, "#############")
+def dataset_testing(document, summary_1, summary_2, sigma, sn, rouge_obj, result_file):
+    print("#######", sigma, "->", sn, "#############")
     row = {}
 
     row["document"] = document
@@ -14,7 +14,7 @@ def dataset_testing(document, summary_1, summary_2, sigma, serial_no, rouge, res
     _, machine_summary = get_summary(document, size=0.20, sigma=sig)
     row["machine-summary"] = machine_summary
 
-    rouge_score = rouge.get_scores(machine_summary, summary_1)[0]
+    rouge_score = rouge_obj.get_scores(machine_summary, summary_1)[0]
     row["rouge-1-r"] = rouge_score['rouge-1']['r']
     row["rouge-1-p"] = rouge_score['rouge-1']['p']
     row["rouge-1-f"] = rouge_score['rouge-1']['f']
@@ -33,7 +33,7 @@ def dataset_testing(document, summary_1, summary_2, sigma, serial_no, rouge, res
     _, machine_summary = get_summary(document, size=.20, sigma=sig)
     row["machine-summary"] = machine_summary
 
-    rouge_score = rouge.get_scores(machine_summary, summary_2)[0]
+    rouge_score = rouge_obj.get_scores(machine_summary, summary_2)[0]
     row["rouge-1-r"] = rouge_score['rouge-1']['r']
     row["rouge-1-p"] = rouge_score['rouge-1']['p']
     row["rouge-1-f"] = rouge_score['rouge-1']['f']
@@ -85,7 +85,7 @@ sigmas = [
 document_summaries = pd.read_csv("comparing_codes/evaluation_dataset_4/Evaluation_Dataset_4.csv",encoding="utf-8",delimiter=",")
 rouge = Rouge()
 
-resultComp = open("fahim_firstrank_e(a(m2)_2s2)/ex1_ds4/resultcomp.csv", "w+", encoding="utf-8")
+resultComp = open("fahim_firstrank_e(a(m2)_2s2)/ex2_ds4/resultcomp.csv", "w+", encoding="utf-8")
 resultComp.write("Sigma,rouge-1-r,rouge-1-p,rouge-1-f,rouge-2-r,rouge-2-p,rouge-2-f,rouge-l-r,rouge-l-p,rouge-l-f\n")
 resultComp.close()
 result_compilation = []
@@ -167,12 +167,12 @@ for sig in sigmas:
         [sum_r1_r / length, sum_r1_p / length, sum_r1_f / length, sum_r2_r / length, sum_r2_p / length,
          sum_r2_f / length, sum_rl_r / length,
          sum_rl_p / length, sum_rl_f / length])
-    resultComp = open("fahim_firstrank_e(a(m2)_2s2)/ex1_ds4/resultcomp.csv", "a+", encoding="utf-8")
+    resultComp = open("fahim_firstrank_e(a(m2)_2s2)/ex2_ds4/resultcomp.csv", "a+", encoding="utf-8")
     resultComp.write(str(sig) + "," + str(sum_r1_r / length) + "," + str(sum_r1_p / length) + "," + str(
         sum_r1_f / length) + "," + str(sum_r2_r / length) + "," + str(sum_r2_p / length) + "," + str(
         sum_r2_f / length) + "," + str(sum_rl_r / length) + "," + str(sum_rl_p / length) + "," + str(
         sum_rl_f / length) + "\n")
     resultComp.close()
     json.dump(result_compilation,
-              open("fahim_firstrank_e(a(m2)_2s2)/ex1_ds4/fahim_dataset_4_" + str(sig) + ".json", "w",
+              open("fahim_firstrank_e(a(m2)_2s2)/ex2_ds4/fahim_dataset_4_" + str(sig) + ".json", "w",
                    encoding="utf-8"), ensure_ascii=False, indent=4)

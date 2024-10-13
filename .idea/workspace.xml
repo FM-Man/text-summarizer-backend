@@ -5,303 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="756bab8d-2422-4fcc-8051-6ef9a39550ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/comparing_codes/dataset_4_result.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/comparing_codes/evaluation_dataset_4/Evaluation_Dataset_4.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/comparing_codes/evaluation_dataset_4/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/comparing_codes/ksarkar/KsarkarResult_dataset_4_10.0.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/comparing_codes/lexrank/lexRankResult_dataset_4.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/ds_4_resultcomp.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tasfeerResult_dataset_4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/Driver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/ksarkar/Driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/ksarkar/Driver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/ksarkar/resultcomp.csv" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/ksarkar/resultcomp.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/lexrank/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/lexrank/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/size.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/size.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tasfeerNayeem.py" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tasfeerNayeem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster10.0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster10.0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster10.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster10.1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster10.2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster10.2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster10.3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster10.3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster10.4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster10.4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster10.5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster10.5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster10.6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster10.6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster10.7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster10.7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster10.8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster10.8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster10.9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster10.9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster11.0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster11.0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster11.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster11.1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster11.10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster11.10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster11.2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster11.2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster11.3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster11.3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster11.4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster11.4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster11.5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster11.5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster11.6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster11.6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster11.7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster11.7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster11.8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster11.8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster11.9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster11.9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster12.9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.12.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster13.9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.12.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.13.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster14.9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.12.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.13.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.14.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.14.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster15.9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.12.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.13.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.14.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.14.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.15.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.15.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster16.9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.12.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.13.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.14.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.14.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.15.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.15.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.16.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.16.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster17.9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.12.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.13.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.14.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.14.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.15.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.15.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.16.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.16.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.17.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.17.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster18.9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.12.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.13.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.14.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.14.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.15.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.15.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.16.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.16.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.17.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.17.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.18.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.18.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster19.9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster2.0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster2.0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster2.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster2.1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.12.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.13.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.14.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.14.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.15.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.15.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.16.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.16.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.17.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.17.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.18.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.18.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.19.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.19.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.20.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.20.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster21.9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.12.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.13.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.14.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.14.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.15.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.15.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.16.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.16.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.17.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.17.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.18.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.18.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.19.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.19.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.20.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.20.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.21.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.21.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.22.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.22.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster23.9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.12.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.13.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.14.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.14.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.15.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.15.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.16.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.16.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.17.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.17.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.18.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.18.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.19.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.19.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.20.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.20.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.21.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.21.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.22.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.22.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.23.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.23.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.24.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.24.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.25.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.25.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.26.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.26.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.27.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.27.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster28.9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster3.0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster3.0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster3.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster3.1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster3.2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster3.2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster4.0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster4.0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster4.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster4.1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster4.2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster4.2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster4.3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster4.3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster5.0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster5.0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster5.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster5.1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster5.2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster5.2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster5.3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster5.3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster5.4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster5.4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster6.0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster6.0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster6.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster6.1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster6.2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster6.2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster6.3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster6.3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster6.4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster6.4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster6.5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster6.5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster7.0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster7.0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster7.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster7.1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster7.2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster7.2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster7.3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster7.3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster7.4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster7.4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster7.5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster7.5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster7.6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster7.6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster8.0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster8.0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster8.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster8.1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster8.2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster8.2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster8.3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster8.3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster8.4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster8.4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster8.5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster8.5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster8.6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster8.6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster8.7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster8.7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster9.0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster9.0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster9.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster9.1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster9.2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster9.2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster9.3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster9.3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster9.4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster9.4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster9.5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster9.5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster9.6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster9.6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster9.7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster9.7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster9.8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/Cluster9.8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster12.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster13.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster14.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster14.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster15.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster15.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster16.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster16.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster17.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster17.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster18.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster18.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster19.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster19.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster21.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster21.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster23.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster23.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster28.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster28.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comparing_codes/tasfeerNayyem/tmp/cluster9.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -329,33 +35,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "Python.Controller.executor": "Run",
-    "Python.ConvertingIntoCSV.executor": "Run",
-    "Python.Driver.executor": "Run",
-    "Python.Main.executor": "Run",
-    "Python.Playground.executor": "Run",
-    "Python.Processor.executor": "Run",
-    "Python.ServiceNew.executor": "Run",
-    "Python.tasfeerNayeem (1).executor": "Run",
-    "Python.tasfeerNayeem.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/java workspace/Github/text-summarizer-backend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;Python.Controller.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ConvertingIntoCSV.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Driver.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Playground.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Processor.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ServiceNew.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tasfeerNayeem (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.tasfeerNayeem.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/java workspace/Github/text-summarizer-backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\java workspace\Github\text-summarizer-backend\comparing_codes\evaluation_dataset_1" />
@@ -371,7 +78,7 @@
       <recent name="E:\java workspace\Github\text-summarizer-backend\fahimLimitedSquaredAverageResult\ex1" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.Driver">
     <configuration name="Controller" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="text-summarizer-backend" />
       <option name="ENV_FILES" value="" />
@@ -513,9 +220,9 @@
     </configuration>
     <list>
       <item itemvalue="Python.Driver" />
-      <item itemvalue="Python.Processor" />
       <item itemvalue="Python.Controller" />
       <item itemvalue="Python.Playground" />
+      <item itemvalue="Python.Processor" />
       <item itemvalue="Python.tasfeerNayeem (1)" />
       <item itemvalue="Python.tasfeerNayeem" />
     </list>
@@ -569,6 +276,15 @@
       <workItem from="1720976244266" duration="1288000" />
       <workItem from="1721035783968" duration="2767000" />
       <workItem from="1721042997873" duration="1318000" />
+      <workItem from="1721365407881" duration="79000" />
+      <workItem from="1723649763426" duration="3450000" />
+      <workItem from="1723726142213" duration="3729000" />
+      <workItem from="1723951360349" duration="771000" />
+      <workItem from="1723964076435" duration="612000" />
+      <workItem from="1723967815465" duration="45000" />
+      <workItem from="1724077119579" duration="821000" />
+      <workItem from="1726760598791" duration="931000" />
+      <workItem from="1726761560933" duration="366000" />
     </task>
     <servers />
   </component>
@@ -580,7 +296,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/alltexts_txt$tasfeerNayeem__1_.coverage" NAME="tasfeerNayeem (1) Coverage Results" MODIFIED="1718873547508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/comparing_codes/tasfeerNayyem" />
-    <SUITE FILE_PATH="coverage/alltexts_txt$Driver.coverage" NAME="Driver Coverage Results" MODIFIED="1721040456790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/comparing_codes/ksarkar" />
+    <SUITE FILE_PATH="coverage/alltexts_txt$Driver.coverage" NAME="Driver Coverage Results" MODIFIED="1724077824603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/alltexts_txt$Playground.coverage" NAME="Playground Coverage Results" MODIFIED="1720208658130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/alltexts_txt$Controller.coverage" NAME="Controller Coverage Results" MODIFIED="1718045741842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/alltexts_txt$Processor.coverage" NAME="Processor Coverage Results" MODIFIED="1721037366326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/comparing_codes/evaluation_dataset_4" />
