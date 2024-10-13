@@ -13,9 +13,13 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.metrics import silhouette_score
 from sklearn.manifold import MDS
+import pythainlp
+from pythainlp.tokenize import sent_tokenize, word_tokenize
+
 
 nltk.download('punkt')
 __all__ = ['get_summary']
+root = "C:\\Users\\rahman\\Desktop\\abdur rahman\\text-summarizer-backend-main\\new total\\text-summarizer-backend\\"
 
 """================================== step 1 =======================================
 This part preprocesses the  input document. The preprocessing involves at first
@@ -25,8 +29,11 @@ done using the 'custom_tokenizer' function and stop word removal using the
 ================================================================================="""
 
 
-def _preprocessor(text):
-    sentence_dividers = ['।', '|', '!', '\n', '?', ":"]
+def _preprocessor(text,lang):
+    if lang == "thai":
+        return thai_preprocessor(text)
+
+    sentence_dividers = ['।', '|', '!', '\n', '?', ":", '.']
     sentences = _custom_tokenizer(text, sentence_dividers)  # each sentences as intact and in a list
 
     word_dividers = [' ', ',', '.', ';', '"', "'", '`', '(', ')', '[', ']', '-', '‘', '’‌', '%', '/', '\\']
@@ -34,7 +41,7 @@ def _preprocessor(text):
     for sentence in sentences:
         words.append(_custom_tokenizer(sentence, word_dividers))  # each word as a separate token now
 
-    preprocessed_word_list = _stopword_removal(words)
+    preprocessed_word_list = _stopword_removal(words,lang)
 
     # the returning variables are two list.
     # sentences = [sent1, sent2, sent3, ...]
@@ -57,8 +64,8 @@ def _custom_tokenizer(text, dividers):
     return processed_tokens
 
 
-def _stopword_removal(sentences):
-    stop_words = open("datasets\\stopwords.txt", "r", encoding="utf8").readlines()
+def _stopword_removal(sentences,language):
+    stop_words = open(root+"datasets\\stopwords\\"+language+".txt", "r", encoding="utf8").readlines()
     stop_words = [stop_word.split('\n')[0] for stop_word in stop_words]
 
     preprocessed_word_list = []
@@ -67,6 +74,12 @@ def _stopword_removal(sentences):
 
     return preprocessed_word_list
 
+
+def thai_preprocessor(text):
+    sentences = sent_tokenize(text, engine="whitespace+newline")
+    words_list = [word_tokenize(sentence) for sentence in sentences]
+    pre_processed_word_list = _stopword_removal(words_list,'thai')
+    return sentences, pre_processed_word_list
 
 """====================================step 2=======================================
 Now the vector field consisting of over 1.4M bengali words are read. This function 
@@ -79,27 +92,26 @@ used to read from here. These set of functions return a 2d list. it looks like t
 
 
 @lru_cache(maxsize=1)
-def _read_vector():
-    if not os.path.exists('datasets\\pydic.dic'):
-        if not os.path.exists('datasets\\cc.bn.300.vec'):
-            print('dataset doesnot exist. download text '
-                  'from https://drive.google.com/file/d/1qSjqzygv8_T7LC_S21nCvv_x_Rt-BkK5/view?usp=sharing . download '
-                  'binary from https://drive.google.com/file/d/1Iga8DB-AbUMHZvVc07byzIyPRmWkrAgn/view?usp=drive_link')
+def _read_vector(lang):
+    if not os.path.exists(root+'datasets\\embedding_bin\\'+lang+'.bin'):
+        if not os.path.exists(root+'datasets\\embedding_text\\'+lang+'.txt'):
+            print('dataset doesnot exist. download text https://fasttext.cc/docs/en/crawl-vectors.html')
         else:
-            data = _read_vectors_from_plaintext('datasets\\cc.bn.300.vec')
+            data = _read_vectors_from_plaintext(lang)
             return data
     else:
-        data = _read_vectors_from_object_file()
+        data = _read_vectors_from_object_file(lang)
         return data
 
 
-def _read_vectors_from_plaintext(vec_file_path):
+def _read_vectors_from_plaintext(language):
+    vec_file_path = root+'datasets\\embedding_text\\'+language+'.txt'
     # loading the plaintext model from file
     model = KeyedVectors.load_word2vec_format(vec_file_path, binary=False)
     print('dictionary done')
 
     # saving the binary model as a binary file so that it could be read faster in the future
-    file_path = 'datasets/pydic.dic'
+    file_path = root+'datasets\\embedding_bin\\'+language+'.bin'
     with open(file_path, "wb") as file:
         pickle.dump(model, file)
     print('saving done')
@@ -107,9 +119,9 @@ def _read_vectors_from_plaintext(vec_file_path):
     return model
 
 
-def _read_vectors_from_object_file():
+def _read_vectors_from_object_file(language):
     # loading the binary model from the binary file
-    file_path = 'datasets/pydic.dic'
+    file_path = root+'datasets\\embedding_bin\\'+language+'.bin'
     with open(file_path, "rb") as file:
         data = pickle.load(file)
     print('reading done')
@@ -287,9 +299,9 @@ def rank_using_tfidf(sentence_cluster):
     return sorted_sentences[0][0]
 
 
-def get_summary(text, sigma=2, size=.1):
-    sentences, split_sentences = _preprocessor(text)  # step 1
-    vector_space = _read_vector()  # step 2
+def get_summary(text, sigma=2, size=.1, language="bengali"):
+    sentences, split_sentences = _preprocessor(text,language)  # step 1
+    vector_space = _read_vector(language)  # step 2
     set_of_vectors = _vectorizer(vector_space, split_sentences)  # step 3
     set_of_clusters = _spectral_clustering(set_of_vectors, sigma, size)  # step 4
 

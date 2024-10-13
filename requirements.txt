@@ -10,3 +10,4 @@ editdistance
 networkx
 pandas
 lexrank
+pythainlp
